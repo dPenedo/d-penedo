@@ -10,49 +10,6 @@ import danielImage from "../assets/daniel.jpg";
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
-const cactusTech: { desc: string; href: string; title: string }[] = [
-	{
-		desc: "Build fast websites, faster.",
-		href: "https://astro.build",
-		title: "Astro",
-	},
-	{
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-		title: "Tailwind CSS",
-	},
-	{
-		desc: "Simple and easy-to-use markup language.",
-		href: "https://www.markdownguide.org/",
-		title: "Markdown",
-	},
-	{
-		desc: "Markdown for the component era.",
-		href: "https://mdxjs.com/",
-		title: "MDX",
-	},
-	{
-		desc: "Generating png Open Graph images for blog posts.",
-		href: "https://github.com/vercel/satori",
-		title: "Satori",
-	},
-	{
-		desc: "A fully static search library.",
-		href: "https://pagefind.app/",
-		title: "Pagefind",
-	},
-	{
-		desc: "An easy to use Icon component for Astro.",
-		href: "https://github.com/natemoo-re/astro-icon#readme",
-		title: "Astro Icon",
-	},
-	{
-		desc: "Highly customisable source code & syntax highlighter",
-		href: "https://expressive-code.com/",
-		title: "Expressive Code",
-	},
-];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -67,17 +24,33 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 			/>
 		</div>
 		<h1 class="title my-6">
-			Hi, I'm <span class="text-3xl text-accent">Daniel Penedo Lázaro</span>
+			Hi, I'm <span class="text-3xl text-accent">Daniel Penedo Lázaro</span> 👋
 		</h1>
 	</section>
 	<p class="mb-4">
-		I have experience working and studying in diverse environments, and my current focus is on web
-		development. I am a graduate in Django from the UTN (National Technological University -
-		Universidad Tecnológica Nacional in Argentina), specializing in front-end. My main programming
-		languages are Python and JavaScript, and I work with various libraries and frameworks. 🌵 ==> ==
+		I am a basque Web Developer based in Argentina, welcome to my portfolio and blog. I have experience working and studying in diverse environments, and my current focus is on web
+		development. I have a Diploma on Full Stack develpment on on Django and in Spring Boot development, both from the UTN (National Technological University -
+		Universidad Tecnológica Nacional in Argentina).
 	</p>
 	<SocialList />
-</PageLayout>
+<section class="mt-16">
+	<h2 class="title mb-4 text-xl">Technologies</h2>
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Primary Programming languages: </b> My main languages are <b class="text-accent">JavaScript</b> and <b class="text-accent">Python.</b></p>
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Front End Technologies: </b> <b class="text-accent">React </b>, Astro, <b class="text-accent">Tailwind</b>, <b class="text-accent">SASS</b> and Bootstrap.
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Back End Technologies: </b> Node.JS, <b class="text-accent">Django</b> and Spring.
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Linux & Bash Scripting: </b>Proficient in Linux command line, <b class="text-accent">Bash/Zsh</b> scripting and <b class="text-accent"> GIT</b> version control.
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Design Tools: </b> Figma, Gimp and Inkscape
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Additional Programming languages: </b>Java and Lua.
+</section>
+<section class="mt-16">
+	<h2 class="title mb-4 text-xl">Projects</h2>
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Primary Programming languages: </b> My main languages are <b class="text-accent">JavaScript</b> and <b class="text-accent">Python.</b></p>
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Front End Technologies: </b> <b class="text-accent">React </b>, Astro, <b class="text-accent">Tailwind</b>, <b class="text-accent">SASS</b> and Bootstrap.
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Back End Technologies: </b> Node.JS, <b class="text-accent">Django</b> and Spring.
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Linux & Bash Scripting: </b>Proficient in Linux command line, <b class="text-accent">Bash/Zsh</b> scripting and <b class="text-accent"> GIT</b> version control.
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Design Tools: </b> Figma, Gimp and Inkscape
+    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Additional Programming languages: </b>Java and Lua.
+</section>
 <section aria-label="Blog post list" class="mt-16">
 	<h2 class="title mb-4 text-xl">Posts</h2>
 	<ul class="space-y-4">
@@ -90,23 +63,4 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 		}
 	</ul>
 </section>
-<section class="mt-16">
-	<h2 class="title mb-4 text-xl">Technologies</h2>
-	<dl class="space-y-4">
-		{
-			cactusTech.map(({ desc, href, title }) => (
-				<div class="flex flex-col gap-2 md:flex-row">
-					<dt>
-						<span class="flex">
-							<a class="cactus-link" href={href} rel="noopener noreferrer" target="_blank">
-								{title}
-							</a>
-							:
-						</span>
-					</dt>
-					<dd>{desc}</dd>
-				</div>
-			))
-		}
-	</dl>
-</section>
+</PageLayout>
