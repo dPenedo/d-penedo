@@ -4,12 +4,52 @@ import SocialList from "@/components/SocialList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import PageLayout from "@/layouts/Base.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
-
 import danielImage from "../assets/daniel.jpg";
+import pomodoroImage from '../assets/captura-pomodoro.png'; // Adjust the path as per your folder structure
+import martzianosImage from '../assets/captura-martzianos.png'
+import albertImage from '../assets/captura-alber.png'
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+
+
+const ProjectType = {
+  PYTHON: 'Python Projects',
+  WEB: 'Web Development',
+} as const
+
+type Project = { title: string; desc: string; image: any ; repoLink: string; webLink: string; typeOfProject: typeof ProjectType[keyof typeof ProjectType]}
+
+  const projects: Project[]= [
+	{
+		title: "Pomodoro",
+		desc: "A Pomodoro timer made in Python with TkInter library",
+		image: pomodoroImage,
+    repoLink: "https://github.com/dPenedo/pomodoro",
+    webLink: "",
+    typeOfProject: ProjectType.PYTHON,
+	},
+	{
+		title: "Martzianos War",
+		desc: "A Space Invaders style game made with the PyGame library",
+		image: martzianosImage,
+    repoLink: "https://github.com/dPenedo/martzianos",
+    webLink: "",
+    typeOfProject: ProjectType.PYTHON,
+	},
+	{
+		title: "Albert Martin -  Professional Website",
+		desc: "A psychologist and  mediator's Website",
+		image: albertImage,
+    // FIXME:Wrong repo
+    repoLink: "https://github.com/dPenedo/martzianos",
+    webLink: "https://albertmediador.com",
+    typeOfProject: ProjectType.WEB,
+	},
+];
+
+
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -29,10 +69,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section>
 	<p class="mb-4">
 		I am a basque Web Developer based in Argentina, welcome to my portfolio and blog. I have experience working and studying in diverse environments, and my current focus is on web
-		development. I have a Diploma on Full Stack develpment on on Django and in Spring Boot development, both from the UTN (National Technological University -
+		development. I have a Diploma on Full Stack develpment on Django and on Spring Boot development, both from the UTN (National Technological University -
 		Universidad Tecnológica Nacional in Argentina).
 	</p>
 	<SocialList />
+
+
+
+    <!-- ========== Technologies  ========== -->
 <section class="mt-16">
 	<h2 class="title mb-4 text-xl">Technologies</h2>
     <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Primary Programming languages: </b> My main languages are <b class="text-quote">JavaScript</b> and <b class="text-quote">Python.</b></p>
@@ -42,18 +86,40 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
     <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Design Tools: </b> Figma, Gimp and Inkscape
     <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Additional Programming languages: </b>Java and Lua.
 </section>
+    <!-- ========== Technologies   ========== -->
 
-
+    <!-- ========== Projects  ========== -->
   <!-- TODO: continue with Projects -->
+
 <section class="mt-16">
-	<h2 class="title mb-4 text-xl">Projects</h2>
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Primary Programming languages: </b> My main languages are <b class="text-accent">JavaScript</b> and <b class="text-accent">Python.</b></p>
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Front End Technologies: </b> <b class="text-accent">React </b>, Astro, <b class="text-accent">Tailwind</b>, <b class="text-accent">SASS</b> and Bootstrap.
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Back End Technologies: </b> Node.JS, <b class="text-accent">Django</b> and Spring.
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Linux & Bash Scripting: </b>Proficient in Linux command line, <b class="text-accent">Bash/Zsh</b> scripting and <b class="text-accent"> GIT</b> version control.
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Design Tools: </b> Figma, Gimp and Inkscape
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Additional Programming languages: </b>Java and Lua.
+    <h2 class="title mb-4 text-xl">Projects</h2>
+
+    {Object.values(ProjectType).map((typeOfProject) => (
+        <section>
+            <h2 class="title mb-4 text-xl">{typeOfProject}</h2>
+            {projects
+                .filter((project) => project.typeOfProject === typeOfProject)
+                .map((project) => (
+                    <div class="flex">
+                        <a class="block overflow-hidden" href={project.repoLink}>
+                            <Image src={project.image} alt={project.title} class="w-32  mr-4 rounded-lg object-contain transition duration-300 hover:scale-[1.04]" /> {/* Adjust class according to your styling needs */}
+                        </a>
+                        <div>
+                            <h3>{project.title}</h3>
+                            <p>{project.desc}</p>
+                            <a href={project.repoLink} target="_blank" rel="noopener noreferrer">Repository Link</a>
+                            {project.webLink && <a href={project.webLink} target="_blank" rel="noopener noreferrer">Web Link</a>}
+                        </div>
+                    </div>
+                ))}
+        </section>
+    ))}
 </section>
+    <!-- ========== Projects   ========== -->
+
+
+
+    <!-- ========== Posts  ========== -->
 <section aria-label="Blog post list" class="mt-16">
 	<h2 class="title mb-4 text-xl">Posts</h2>
 	<ul class="space-y-4">
@@ -66,4 +132,5 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		}
 	</ul>
 </section>
+    <!-- ========== Posts   ========== -->
 </PageLayout>

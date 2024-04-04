@@ -13,6 +13,25 @@ Other skills: bash scripting and Lua.
 
 
 #### Projects:
+
+- Title
+- Description
+- Image
+- Repo
+- Web
+
 Python Projects:
+- Pomodoro
+- Martzianos war
+
 Web Development:
+- albertmediador.com
+- doggy-app.com
+- tuVeterinaria
+- AprovechApp!
+
+- IzanMedia?
+- Barritas?
+- clima?
+- chronostalgic?
 
