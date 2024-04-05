@@ -8,6 +8,7 @@ import danielImage from "../assets/daniel.jpg";
 import pomodoroImage from '../assets/captura-pomodoro.png'; // Adjust the path as per your folder structure
 import martzianosImage from '../assets/captura-martzianos.png'
 import albertImage from '../assets/captura-alber.png'
+import doggyImage from '../assets/captura-doggy.png'
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
@@ -15,16 +16,54 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 
 const ProjectType = {
-  PYTHON: 'Python Projects',
   WEB: 'Web Development',
+  PYTHON: 'Python Projects',
 } as const
 
 type Project = { title: string; desc: string; image: any ; repoLink: string; webLink: string; typeOfProject: typeof ProjectType[keyof typeof ProjectType]}
 
   const projects: Project[]= [
 	{
+		title: "Albert Martin -  Professional Website",
+		desc: "A psychologist and  mediator's Website. I also made the dessign, It's static and it's made with Bootstrap.",
+		image: albertImage,
+    // FIXME:Repo is private
+    repoLink: "https://github.com/dPenedo/albert-martin",
+    webLink: "https://albertmediador.com",
+    typeOfProject: ProjectType.WEB,
+	},
+	{
+		title: "tuVeterinaria - Django Ecommerce",
+		desc: "An ecommerce built with Django Framework. It was my final project for the UTN diploma on Django Full Stack development.",
+    //TODO: add image
+		image: doggyImage,
+    // FIXME:Repo is private
+    repoLink: "https://github.com/dPenedo/tuveterinaria",
+    //TODO: put in production
+    webLink: "https://doggy-app.com/",
+    typeOfProject: ProjectType.WEB,
+	},
+	{
+		title: "AprovechÁpp! - Spring WebApp",
+		desc: "A Web App built with Spring Framework. It was my final project for the UTN diploma on Spring Boot development.",
+    //TODO: add image
+		image: doggyImage,
+    repoLink: "https://github.com/dPenedo/aprovechapp",
+    //TODO: put in production
+    webLink: "https://doggy-app.com/",
+    typeOfProject: ProjectType.WEB,
+	},
+	{
+		title: "Doggy - Django WebApp",
+		desc: "Online dog boarding service. It's dynamic and it's built with Django Framework.",
+		image: doggyImage,
+    repoLink: "https://github.com/No-Country/c6-15-ft-python-/",
+    webLink: "https://doggy-app.com/",
+    typeOfProject: ProjectType.WEB,
+	},
+	{
 		title: "Pomodoro",
-		desc: "A Pomodoro timer made in Python with TkInter library",
+		desc: "A Pomodoro timer made in Python with TkInter library.",
 		image: pomodoroImage,
     repoLink: "https://github.com/dPenedo/pomodoro",
     webLink: "",
@@ -32,20 +71,11 @@ type Project = { title: string; desc: string; image: any ; repoLink: string; web
 	},
 	{
 		title: "Martzianos War",
-		desc: "A Space Invaders style game made with the PyGame library",
+		desc: "A Space Invaders style game made with the PyGame library.",
 		image: martzianosImage,
     repoLink: "https://github.com/dPenedo/martzianos",
     webLink: "",
     typeOfProject: ProjectType.PYTHON,
-	},
-	{
-		title: "Albert Martin -  Professional Website",
-		desc: "A psychologist and  mediator's Website",
-		image: albertImage,
-    // FIXME:Wrong repo
-    repoLink: "https://github.com/dPenedo/martzianos",
-    webLink: "https://albertmediador.com",
-    typeOfProject: ProjectType.WEB,
 	},
 ];
 
@@ -78,7 +108,7 @@ type Project = { title: string; desc: string; image: any ; repoLink: string; web
 
     <!-- ========== Technologies  ========== -->
 <section class="mt-16">
-	<h2 class="title mb-4 text-xl">Technologies</h2>
+    <h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Technologies</h2>
     <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Primary Programming languages: </b> My main languages are <b class="text-quote">JavaScript</b> and <b class="text-quote">Python.</b></p>
     <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Front End Technologies: </b> <b class="text-quote">React </b>, Astro, <b class="text-quote">Tailwind</b>, <b class="text-quote">SASS</b> and Bootstrap.
     <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Back End Technologies: </b> Node.JS, <b class="text-quote">Django</b> and Spring.
@@ -92,27 +122,34 @@ type Project = { title: string; desc: string; image: any ; repoLink: string; web
   <!-- TODO: continue with Projects -->
 
 <section class="mt-16">
-    <h2 class="title mb-4 text-xl">Projects</h2>
+    <h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Projects</h2>
 
     {Object.values(ProjectType).map((typeOfProject) => (
-        <section>
-            <h2 class="title mb-4 text-xl">{typeOfProject}</h2>
-            {projects
-                .filter((project) => project.typeOfProject === typeOfProject)
-                .map((project) => (
-                    <div class="flex">
-                        <a class="block overflow-hidden" href={project.repoLink}>
-                            <Image src={project.image} alt={project.title} class="w-32  mr-4 rounded-lg object-contain transition duration-300 hover:scale-[1.04]" /> {/* Adjust class according to your styling needs */}
-                        </a>
-                        <div>
-                            <h3>{project.title}</h3>
-                            <p>{project.desc}</p>
-                            <a href={project.repoLink} target="_blank" rel="noopener noreferrer">Repository Link</a>
-                            {project.webLink && <a href={project.webLink} target="_blank" rel="noopener noreferrer">Web Link</a>}
-                        </div>
-                    </div>
-                ))}
-        </section>
+
+<section>
+    <h2 class="title mb-4 text-xl">{typeOfProject}</h2>
+    {projects
+        .filter((project) => project.typeOfProject === typeOfProject)
+        .map((project) => (
+            <div class="flex flex-col md:flex-row p-4 my-4 border border-gray-400 rounded-lg "> {/* Change to flex-col for mobile layout */}
+                <div class="flex flex-col"> {/* Add a nested flex-col to handle title and image */}
+                    <a class="block overflow-hidden me-2 w-full min-w-full mb-2 md:w-40 md:min-w-32" href={project.repoLink}>
+                        <Image src={project.image} alt={project.title} class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]" /> {/* Adjust class according to your styling needs */}
+                    </a>
+                </div>
+                <div class="flex flex-col md:mx-4 my-2 md:my-0">
+                    <h3 class="font-bold text-xl md:my-0 md:mb-2">{project.title}</h3>
+                    <p>{project.desc}</p>
+                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" class="my-2"><span class="cactus-link"><span class="me-2 "> </span> Repository Link</span></a>
+                    {project.webLink &&
+                  <a href={project.webLink} target="_blank" rel="noopener noreferrer"><span class="cactus-link"><span class="me-2">  </span> WebSite Link<span></a>
+                    }
+                </div>
+            </div>
+      ))}
+</section>
+
+
     ))}
 </section>
     <!-- ========== Projects   ========== -->
