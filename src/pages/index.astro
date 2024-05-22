@@ -126,7 +126,7 @@ type Project = { title: string; desc: string; image: any ; repoLink: string; web
 
     {Object.values(ProjectType).map((typeOfProject) => (
 
-<section>
+<div>
     <h2 class="title mb-4 text-xl">{typeOfProject}</h2>
     {projects
         .filter((project) => project.typeOfProject === typeOfProject)
@@ -147,7 +147,7 @@ type Project = { title: string; desc: string; image: any ; repoLink: string; web
                 </div>
             </div>
       ))}
-</section>
+</div>
 
 
     ))}
