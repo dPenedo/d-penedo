@@ -9,6 +9,8 @@ import pomodoroImage from '../assets/captura-pomodoro.png'; // Adjust the path a
 import martzianosImage from '../assets/captura-martzianos.png'
 import albertImage from '../assets/captura-alber.png'
 import doggyImage from '../assets/captura-doggy.png'
+import aprovechapp from '../assets/captura-aprovechapp.png'
+import tuveterinaria from '../assets/captura-tuveterinaria.png'
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
@@ -27,30 +29,27 @@ type Project = { title: string; desc: string; image: any ; repoLink: string; web
 		title: "Albert Martin -  Professional Website",
 		desc: "A psychologist and  mediator's Website. I also made the dessign, It's static and it's made with Bootstrap.",
 		image: albertImage,
-    // FIXME:Repo is private
-    repoLink: "https://github.com/dPenedo/albert-martin",
+    repoLink: "",
     webLink: "https://albertmediador.com",
     typeOfProject: ProjectType.WEB,
 	},
 	{
 		title: "tuVeterinaria - Django Ecommerce",
-		desc: "An ecommerce built with Django Framework. It was my final project for the UTN diploma on Django Full Stack development.",
-    //TODO: add image
-		image: doggyImage,
+		desc: "An ecommerce built with Django Framework with Sqlite database and user authentication. It was my final project for the UTN diploma on Django Full Stack development.",
+		image: tuveterinaria,
     // FIXME:Repo is private
     repoLink: "https://github.com/dPenedo/tuveterinaria",
     //TODO: put in production
-    webLink: "https://doggy-app.com/",
+    webLink: "",
     typeOfProject: ProjectType.WEB,
 	},
 	{
 		title: "AprovechÁpp! - Spring WebApp",
 		desc: "A Web App built with Spring Framework. It was my final project for the UTN diploma on Spring Boot development.",
-    //TODO: add image
-		image: doggyImage,
+		image: aprovechapp,
     repoLink: "https://github.com/dPenedo/aprovechapp",
     //TODO: put in production
-    webLink: "https://doggy-app.com/",
+    webLink: "",
     typeOfProject: ProjectType.WEB,
 	},
 	{
@@ -128,25 +127,35 @@ type Project = { title: string; desc: string; image: any ; repoLink: string; web
 
 <div>
     <h2 class="title mb-4 text-xl">{typeOfProject}</h2>
-    {projects
-        .filter((project) => project.typeOfProject === typeOfProject)
-        .map((project) => (
-            <div class="flex flex-col md:flex-row p-4 my-4 border border-gray-400 rounded-lg "> {/* Change to flex-col for mobile layout */}
-                <div class="flex flex-col"> {/* Add a nested flex-col to handle title and image */}
-                    <a class="block overflow-hidden me-2 w-full min-w-full mb-2 md:w-40 md:min-w-32" href={project.repoLink}>
-                        <Image src={project.image} alt={project.title} class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]" /> {/* Adjust class according to your styling needs */}
-                    </a>
-                </div>
-                <div class="flex flex-col md:mx-4 my-2 md:my-0">
-                    <h3 class="font-bold text-xl md:my-0 md:mb-2">{project.title}</h3>
-                    <p>{project.desc}</p>
-                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" class="my-2"><span class="cactus-link"><span class="me-2 "> </span> Repository Link</span></a>
-                    {project.webLink &&
-                  <a href={project.webLink} target="_blank" rel="noopener noreferrer"><span class="cactus-link"><span class="me-2">  </span> WebSite Link<span></a>
-                    }
-                </div>
+      {projects
+    .filter((project) => project.typeOfProject === typeOfProject)
+    .map((project) => (
+        <div class="flex flex-col md:flex-row p-4 my-4 border border-gray-400 rounded-lg ">
+            <div class="flex flex-col">
+                <a class="block overflow-hidden me-2 w-full min-w-full mb-2 md:w-40 md:min-w-32" href={project.repoLink}>
+                    <Image src={project.image} alt={project.title} class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]" />
+                </a>
             </div>
-      ))}
+            <div class="flex flex-col md:mx-4 my-2 md:my-0">
+                <h3 class="font-bold text-xl md:my-0 md:mb-2">{project.title}</h3>
+                <p>{project.desc}</p>
+                {project.repoLink && (
+                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" class="mt-2">
+                        <span class="cactus-link">
+                            <span class="me-2 "> </span> Repository Link
+                        </span>
+                    </a>
+                )}
+                {project.webLink && (
+                    <a href={project.webLink} target="_blank" rel="noopener noreferrer" class="mt-2">
+                        <span class="cactus-link">
+                            <span class="me-2">  </span> WebSite Link
+                        </span>
+                    </a>
+                )}
+            </div>
+        </div>
+    ))}
 </div>
 
 
