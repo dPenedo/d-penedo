@@ -8,6 +8,17 @@
 Basque developer living in Argentina. Building and sharing code!! 🚀
 
 
+
+Hi, I'm Daniel. I have experience working and studying in diverse environments, and my current focus is on web development. I am a graduate in Django and in Spring Boot from the UTN (National Technological University - Universidad Tecnológica Nacional in Argentina). My main programming languages are Python, Java, and JavaScript, and I work with various libraries and frameworks.
+
+I have both knowledge and hands-on experience as a full-stack web developer, using HTML, CSS, SASS, Bootstrap, Tailwind, Java, Spring, jQuery, and React. During my time at No Country, I successfully completed two Django job emulation projects, utilizing the SCRUM methodology. Currently, I am freelancing as a front-end developer.
+
+In addition, I have a basic understanding of Bash scripting, and I use Linux and program with Neovim, constantly making modifications, writing small scripts, and contributing to open repositories. I also love design, which I apply to my freelance work and personal projects. I use Figma for designing layouts, GIMP for editing images, and Inkscape for creating icons and logos.
+
+Moreover, I hold a Bachelor's degree with majors in Psychology and Literary Theory and Comparative Literature from UAB (Universidad Autónoma de Barcelona). Additionally, I am a certified Music Teacher from IPA (Instituto del Profesorado de Arte, Mar del Plata).
+
+I am interested in connecting with professionals who share similar interests, and I'm open to both job opportunities and freelance proposals.
+
 <!-- ## Table Of Contents -->
 <!---->
 <!-- 1. [Key Features](#key-features) -->
