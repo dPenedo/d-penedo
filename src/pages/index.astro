@@ -5,12 +5,15 @@ import PostPreview from "@/components/blog/PostPreview.astro";
 import PageLayout from "@/layouts/Base.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
 import danielImage from "../assets/daniel.jpg";
-import pomodoroImage from '../assets/captura-pomodoro.png'; // Adjust the path as per your folder structure
-import martzianosImage from '../assets/captura-martzianos.png'
-import albertImage from '../assets/captura-alber.png'
-import doggyImage from '../assets/captura-doggy.png'
-import aprovechapp from '../assets/captura-aprovechapp.png'
-import tuveterinaria from '../assets/captura-tuveterinaria.png'
+
+
+
+import pomodoroImage from '../../public/captura-pomodoro.png'; // Adjust the path as per your folder structure
+import martzianosImage from '../../public/captura-martzianos.png'
+import albertImage from '../../public/captura-alber.png'
+import doggyImage from '../../public/captura-doggy.png'
+import aprovechapp from '../../public/captura-aprovechapp.png'
+import tuveterinaria from '../../public/captura-tuveterinaria.png'
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
