@@ -5,80 +5,11 @@ import PostPreview from "@/components/blog/PostPreview.astro";
 import PageLayout from "@/layouts/Base.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
 import danielImage from "../assets/daniel.jpg";
-
-
-
-import pomodoroImage from '/public/captura-pomodoro.png'; // Adjust the path as per your folder structure
-import martzianosImage from '/public/captura-martzianos.png'
-import albertImage from '/public/captura-alber.png'
-import doggyImage from '/public/captura-doggy.png'
-import aprovechapp from '/public/captura-aprovechapp.png'
-import tuveterinaria from '/public/captura-tuveterinaria.png'
+import ProjectsSection from "@/components/ProjectsSection.astro";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
-
-const ProjectType = {
-  WEB: 'Web Development',
-  PYTHON: 'Python Projects',
-} as const
-
-type Project = { title: string; desc: string; image: any ; repoLink: string; webLink: string; typeOfProject: typeof ProjectType[keyof typeof ProjectType]}
-
-  const projects: Project[]= [
-	{
-		title: "Albert Martin -  Professional Website",
-		desc: "A psychologist and  mediator's Website. I also made the dessign, It's static and built with Bootstrap.",
-		image: albertImage,
-    repoLink: "",
-    webLink: "https://albertmediador.com",
-    typeOfProject: ProjectType.WEB,
-	},
-	{
-		title: "tuVeterinaria - Django Ecommerce",
-		desc: "An ecommerce site built with Django Framework, featuring an SQLite database and user authentication. It was my final project for the UTN diploma on Django Full Stack development.",
-		image: tuveterinaria,
-    repoLink: "https://github.com/dPenedo/tuveterinaria",
-    //TODO: put in production
-    webLink: "",
-    typeOfProject: ProjectType.WEB,
-	},
-	{
-		title: "AprovechÁpp! - Spring WebApp",
-		desc: "A Web App built with the Spring Framework. It was my final project for the UTN diploma on Spring Boot development.",
-		image: aprovechapp,
-    repoLink: "https://github.com/dPenedo/aprovechapp",
-    //TODO: put in production
-    webLink: "",
-    typeOfProject: ProjectType.WEB,
-	},
-	{
-		title: "Doggy - Django WebApp",
-		desc: "An online dog boarding service. It's dynamic and built with Django Framework.",
-		image: doggyImage,
-    repoLink: "https://github.com/No-Country/c6-15-ft-python-/",
-    webLink: "https://doggy-app.com/",
-    typeOfProject: ProjectType.WEB,
-	},
-	{
-		title: "Pomodoro",
-		desc: "A Pomodoro timer made in Python using the TkInter library.",
-		image: pomodoroImage,
-    repoLink: "https://github.com/dPenedo/pomodoro",
-    webLink: "",
-    typeOfProject: ProjectType.PYTHON,
-	},
-	{
-		title: "Martzianos War",
-		desc: "A Space Invaders style game made with the Pygame library.",
-		image: martzianosImage,
-    repoLink: "https://github.com/dPenedo/martzianos",
-    webLink: "",
-    typeOfProject: ProjectType.PYTHON,
-	},
-];
 
 
 ---
@@ -110,65 +41,19 @@ type Project = { title: string; desc: string; image: any ; repoLink: string; web
     <!-- ========== Technologies  ========== -->
 <section class="mt-16">
     <h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Technologies</h2>
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Primary Programming languages: </b> My main languages are <b class="text-quote">Python.</b>, <b class="text-quote">Java</b>, and <b class="text-quote">JavaScript</b>. </p>
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Front End Technologies: </b> <b class="text-quote">React</b>, Astro, <b class="text-quote">Tailwind</b>, <b class="text-quote">SASS</b> and Bootstrap.
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Back End Technologies: </b> <b class="text-quote">Django</b>, <b class="text-quote">Spring</b> and Node.JS.
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Linux & Bash Scripting: </b>Proficient in Linux command line, <b class="text-quote">Bash/Zsh</b> scripting and <b class="text-quote"> GIT</b> version control.
-    <p class="gap-2 my-1"> <span class="text-accent">#</span><b> Design Tools: </b> Figma, Gimp and Inkscape
+    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Primary Programming languages: </b> My main languages are <b class="text-quote">Python.</b>, <b class="text-quote">Java</b>, and <b class="text-quote">JavaScript</b>. </p>
+    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Front End Technologies: </b> <b class="text-quote">React</b>, Astro, <b class="text-quote">Tailwind</b>, <b class="text-quote">SASS</b> and Bootstrap.
+    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Back End Technologies: </b> <b class="text-quote">Django</b>, <b class="text-quote">Spring</b> and Node.JS.
+    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Linux & Bash Scripting: </b>Proficient in Linux command line, <b class="text-quote">Bash/Zsh</b> scripting and <b class="text-quote"> GIT</b> version control.
+    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Design Tools: </b> Figma, Gimp and Inkscape
 </section>
     <!-- ========== Technologies   ========== -->
 
-    <!-- ========== Projects  ========== -->
-  <!-- TODO: continue with Projects -->
-
-<section class="mt-16">
-    <h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Projects</h2>
-
-    {Object.values(ProjectType).map((typeOfProject) => (
-
-<div>
-    <h2 class="title mb-4 text-xl">{typeOfProject}</h2>
-      {projects
-    .filter((project) => project.typeOfProject === typeOfProject)
-    .map((project) => (
-        <div class="flex flex-col md:flex-row p-4 my-4 border border-gray-400 rounded-lg ">
-            <div class="flex flex-col">
-                <a class="block overflow-hidden me-2 w-full min-w-full mb-2 md:w-40 md:min-w-32" href={project.repoLink}>
-                    <Image src={project.image} alt={project.title} class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]" />
-                </a>
-            </div>
-            <div class="flex flex-col md:mx-4 my-2 md:my-0">
-                <h3 class="font-bold text-xl md:my-0 md:mb-2">{project.title}</h3>
-                <p>{project.desc}</p>
-                {project.repoLink && (
-                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" class="mt-2">
-                        <span class="cactus-link">
-                            <span class="me-2 "> </span> Repository Link
-                        </span>
-                    </a>
-                )}
-                {project.webLink && (
-                    <a href={project.webLink} target="_blank" rel="noopener noreferrer" class="mt-2">
-                        <span class="cactus-link">
-                            <span class="me-2">  </span> WebSite Link
-                        </span>
-                    </a>
-                )}
-            </div>
-        </div>
-    ))}
-</div>
-
-
-    ))}
-</section>
-    <!-- ========== Projects   ========== -->
-
-
+  <ProjectsSection />
 
     <!-- ========== Posts  ========== -->
 <section aria-label="Blog post list" class="mt-16">
-	<h2 class="title mb-4 text-xl">Posts</h2>
+	<h2 class="title mb-4 text-2xl"><span class="text-accent"># </span> Blog Posts</h2>
 	<ul class="space-y-4">
 		{
 			allPostsByDate.map((p) => (
