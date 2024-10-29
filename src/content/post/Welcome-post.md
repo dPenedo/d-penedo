@@ -5,6 +5,7 @@ publishDate: "23 May 2024"
 tags: ["astro", "social"]
 ---
 
+
 ## The first post
 
 So this is the first post. It feels a bit anachronistic to start a Blog site in 2024, but, in the last time, I feel like I enjoy much more reading simple blogs than participating on social networks. Also, when I'm looking for information, like, for example, a concept that I didn't understand in the documentation or opinions about tools that I'm evaluating to use, I normally end up on blogs and not on Twitter/X threads, and so on. I have talked about it with other people, and I feel like it's getting very common.
