@@ -136,5 +136,3 @@ In contrast, non-primitive data types like objects, arrays, and functions offer 
 It's worth considering how TypeScript enhances this topic. TypeScript adds a layer of type safety and static typing to JavaScript, making it easier to identify and resolve type-related errors during development. By enforcing strict type definitions, TypeScript helps developers maintain a clearer understanding of their data structures and reduces the likelihood of bugs associated with type coercion in JavaScript.
 
 Ultimately, a solid grasp of data types, their characteristics, and how they behave in both JavaScript and TypeScript will empower you to write cleaner, more robust code and enable you to take full advantage of the features available in modern web development.
-
-W
