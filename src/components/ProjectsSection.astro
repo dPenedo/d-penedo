@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import pomodoroCapt from "/public/captura-pomodoro.png"; // Adjust the path as per your folder structure
 import martzianosCapt from "/public/captura-martzianos.png";
 import albertCapt from "/public/captura-alber.png";
@@ -8,6 +7,7 @@ import doggyCapt from "/public/captura-doggy.png";
 import aprovechappCapt from "/public/captura-aprovechapp.png";
 import tuveterinariaCapt from "/public/captura-tuveterinaria.png";
 import chronoscriptCapt from "/public/captura-chronoscript.webp";
+import Project from './Project.astro'
 
 ---
 
@@ -17,265 +17,75 @@ import chronoscriptCapt from "/public/captura-chronoscript.webp";
 	<div>
 		<h2 class="title mb-4 text-xl"><span class="text-accent">##</span> Web Developmnet</h2>
 
-		<!-- Escuela de columna -->
-		<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
-			<div class="flex flex-col">
-				<a
-					class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
-					href="https://escuela-de-columna.vercel.app"
-				>
-					<Image
-						src={escuelaDeColumnaCapt}
-						alt="Escuela de columna"
-						class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
-					/>
-				</a>
-			</div>
-			<div class="my-2 flex flex-col md:mx-4 md:my-0">
-				<h3 class="text-xl font-bold md:my-0 md:mb-2">Escuela de Columna - Professional Website</h3>
+
+
+    <!--Escuela de columna-->
+    <Project img = {escuelaDeColumnaCapt} title="Escuela de Columna - Professional Website" webLink1 = "https://escuela-de-columna.vercel.app" >
 				<p>
 					A website created for a multidisciplinary team of healthcare professionals, including
 physiotherapists and doctors. This project was developed using the <b class="text-quote">Next.js</b> framework for
           <b class="text-quote">React</b> and <b class="text-quote">Tailwind CSS</b>.
 				</p>
-				<!--<a href={project.repoLink} target="_blank" rel="noopener noreferrer" class="mt-2">-->
-				<!--    <span class="cactus-link">-->
-				<!--        <span class="me-2"> </span> Repository Link-->
-				<!--    </span>-->
-				<!--</a>-->
-				<a
-					href="https://escuela-de-columna.vercel.app"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="mt-2"
-				>
-					<span class="cactus-link">
-						<span class="me-2"> </span> WebSite Link
-					</span>
-				</a>
-			</div>
-		</div>
-		<!-- Albert -->
-		<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
-			<div class="flex flex-col">
-				<a
-					class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
-					href="https://albertmediador.com"
-				>
-					<Image
-						src={albertCapt}
-						alt="Albert Martin"
-						class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
-					/>
-				</a>
-			</div>
-			<div class="my-2 flex flex-col md:mx-4 md:my-0">
-				<h3 class="text-xl font-bold md:my-0 md:mb-2">Albert Martin -  Professional Website</h3>
+    </Project>
+
+
+    <!-- Albert -->
+    <Project img = {albertCapt} title="Albert Martin -  Professional Website"   webLink1 = "https://albertmediador.com" >
 				<p>
           A psychologist and mediator's Website. I also made the dessign, It's static and built with <b class="text-quote">Bootstrap</b>.
 				</p>
-				<!--<a href={project.repoLink} target="_blank" rel="noopener noreferrer" class="mt-2">-->
-				<!--    <span class="cactus-link">-->
-				<!--        <span class="me-2"> </span> Repository Link-->
-				<!--    </span>-->
-				<!--</a>-->
-				<a
-					href="https://albertmediador.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="mt-2"
-				>
-					<span class="cactus-link">
-						<span class="me-2"> </span> WebSite Link
-					</span>
-				</a>
-			</div>
-		</div>
+    </Project>
 
-		<!-- ChronoScript -->
-		<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
-			<div class="flex flex-col">
-				<a
-					class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
-					href="https://github.com/dPenedo/chronoscript"
-				>
-					<Image
-						src={chronoscriptCapt}
-						alt="ChronoScript"
-						class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
-					/>
-				</a>
-			</div>
-			<div class="my-2 flex flex-col md:mx-4 md:my-0">
-				<h3 class="text-xl font-bold md:my-0 md:mb-2">ChronoScript - Two Web Apps in One</h3>
+    <!--ChronoScript-->
+    <Project img = {chronoscriptCapt} title="Chronoscript"  repoLink="https://github.com/dPenedo/chronoscript" webLink1 = "lala" webLink2 = "lalala" >
+
 				<p>
 ChronoScript is a web application developed in two versions: one using <b class="text-quote">Vanilla JavaScript</b>, HTML, and CSS, and the other with <b class="text-quote">React</b> and <b class="text-quote">TypeScript</b> using <b class="text-quote">Vite</b>. Both versions include three sections: Stopwatch, Countdown, and World-times (by consuming an API). They also utilize <b class="text-quote">Jest</b> for testing.
 				</p>
-				<a href="https://github.com/dPenedo/chronoscript" target="_blank" rel="noopener noreferrer" class="mt-2">
-				    <span class="cactus-link">
-				        <span class="me-2"> </span> Repository Link
-				    </span>
-				</a>
-				<a
-					href="https://github.com/dPenedo/chronoscript"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="mt-2"
-				>
-					<span class="cactus-link">
-						<span class="me-2"> </span> Vanilla JS WebSite Link
-					</span>
-				</a>
-				<a
-					href="https://github.com/dPenedo/chronoscript"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="mt-2"
-				>
-					<span class="cactus-link">
-						<span class="me-2"> </span> Next.js WebSite Link
-					</span>
-				</a>
-			</div>
-		</div>
-		<!-- tuVeterinaria -->
-		<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
-			<div class="flex flex-col">
-				<a
-					class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
-					href="https://github.com/dPenedo/tuveterinaria"
-				>
-					<Image
-						src={tuveterinariaCapt}
-						alt="tuVeterinaria"
-						class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
-					/>
-				</a>
-			</div>
-			<div class="my-2 flex flex-col md:mx-4 md:my-0">
-				<h3 class="text-xl font-bold md:my-0 md:mb-2">tuVeterinaria - Django Ecommerce</h3>
+    </Project>
+
+
+
+
+
+    <Project img = {tuveterinariaCapt} title="tuVeterinaria - Django Ecommerce"  repoLink="https://github.com/dPenedo/tuveterinaria"  >
+
 				<p>
 An ecommerce site built with <b class="text-quote">Django</b> Framework, featuring an SQLite database and user authentication. It was my final project for the UTN diploma on Django Full Stack development.
 				</p>
-				<a href="https://github.com/dPenedo/tuveterinaria" target="_blank" rel="noopener noreferrer" class="mt-2">
-				    <span class="cactus-link">
-				        <span class="me-2"> </span> Repository Link
-				    </span>
-				</a>
-        <!--TODO: poner en produccion-->
-			</div>
-		</div>
-		<!-- AprovechApp -->
-		<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
-			<div class="flex flex-col">
-				<a
-					class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
-					href="https://github.com/dPenedo/aprovechapp"
-				>
-					<Image
-						src={aprovechappCapt}
-						alt="Aprovechapp"
-						class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
-					/>
-				</a>
-			</div>
-			<div class="my-2 flex flex-col md:mx-4 md:my-0">
-				<h3 class="text-xl font-bold md:my-0 md:mb-2">AprovechÁpp! - Spring WebApp</h3>
+    </Project>
+
+    <Project img = {aprovechappCapt} title="AprovechÁpp! - Spring WebApp"  repoLink="https://github.com/dPenedo/aprovechapp"  >
+
 				<p>
           A Web App built with the Spring Framework. It was my final project for the UTN diploma on <b class="text-quote">Spring Boot</b> development.
 				</p>
-				<a href="https://github.com/dPenedo/aprovechapp" target="_blank" rel="noopener noreferrer" class="mt-2">
-				    <span class="cactus-link">
-				        <span class="me-2"> </span> Repository Link
-				    </span>
-				</a>
-        <!--TODO: poner en produccuion-->
-			</div>
-		</div>
+    </Project>
 
-		<!-- Doggy -->
-		<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
-			<div class="flex flex-col">
-				<a
-					class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
-					href="https://github.com/No-Country/c6-15-ft-python-/"
-				>
-					<Image
-						src={doggyCapt}
-						alt="Doggy"
-						class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
-					/>
-				</a>
-			</div>
-			<div class="my-2 flex flex-col md:mx-4 md:my-0">
-				<h3 class="text-xl font-bold md:my-0 md:mb-2">Doggy - Django WebApp</h3>
+    <Project img = {doggyCapt} title="Doggy - Django WebApp"  repoLink="https://github.com/No-Country/c6-15-ft-python-/"  >
+
 				<p>
           An online dog boarding service. It's dynamic and built with <b class="text-quote">Django</b> Framework and <b class="text-quote">PostgreeSQL</b>.
 				</p>
-				<a href="https://github.com/No-Country/c6-15-ft-python-/" target="_blank" rel="noopener noreferrer" class="mt-2">
-				    <span class="cactus-link">
-				        <span class="me-2"> </span> Repository Link
-				    </span>
-				</a>
-			</div>
-		</div>
+    </Project>
+
+
 
 
     <!--Python-->
-		<h2 class="title mb-4 text-xl"><span class="text-accent">##</span> Python</h2>
+		<h2 class="title my-6 mt-8 text-xl"><span class="text-accent">##</span> Python</h2>
 
-    <!--Pomodoro Desktop App-->
-		<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
-			<div class="flex flex-col">
-				<a
-					class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
-					href="https://github.com/dPenedo/pomodoro"
-				>
-					<Image
-						src={pomodoroCapt}
-						alt="Pomodo App"
-						class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
-					/>
-				</a>
-			</div>
-			<div class="my-2 flex flex-col md:mx-4 md:my-0">
-				<h3 class="text-xl font-bold md:my-0 md:mb-2">Pomodoro Desktop App</h3>
+
+    <Project img = {pomodoroCapt} title="Pomodoro Desktop App"  repoLink="https://github.com/dPenedo/pomodoro"  >
 				<p>
 A Pomodoro timer made in Python using the <b class="text-quote">TkInter</b> library.
 				</p>
-				<a href="https://github.com/dPenedo/pomodoro" target="_blank" rel="noopener noreferrer" class="mt-2">
-				    <span class="cactus-link">
-				        <span class="me-2"> </span> Repository Link
-				    </span>
-				</a>
-			</div>
-		</div>
+    </Project>
 
-		<!-- Martzianos War -->
-		<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
-			<div class="flex flex-col">
-				<a
-					class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
-					href="https://github.com/dPenedo/martzianos"
-				>
-					<Image
-						src={martzianosCapt}
-						alt="Martzianos War game"
-						class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
-					/>
-				</a>
-			</div>
-			<div class="my-2 flex flex-col md:mx-4 md:my-0">
-				<h3 class="text-xl font-bold md:my-0 md:mb-2">Martzianos War</h3>
+    <Project img = {martzianosCapt} title="Martzianos War"  repoLink="https://github.com/dPenedo/martzianos"  >
 				<p>
 A Space Invaders style game made with the <b class="text-quote">Pygame</b> library.
 				</p>
-				<a href="https://github.com/dPenedo/martzianos" target="_blank" rel="noopener noreferrer" class="mt-2">
-				    <span class="cactus-link">
-				        <span class="me-2"> </span> Repository Link
-				    </span>
-				</a>
-			</div>
-		</div>
+    </Project>
 	</div>
 </section>

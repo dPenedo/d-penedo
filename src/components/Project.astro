@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+const { img, title, repoLink, webLink1, webLink2 } = Astro.props;
+
+
+---
+
+<!-- Escuela de columna -->
+<div class="my-4 flex flex-col rounded-lg border border-gray-400 p-4 md:flex-row">
+	<div class="flex flex-col">
+		<a
+			class="md:min-w-32 mb-2 me-2 block w-full min-w-full overflow-hidden md:w-40"
+			href="https://escuela-de-columna.vercel.app"
+		>
+			<Image
+				src={img}
+        alt={title}
+				class="w-full rounded-lg object-contain transition duration-300 hover:scale-[1.04]"
+			/>
+		</a>
+	</div>
+	<div class="my-2 flex flex-col md:mx-4 md:my-0">
+		<h3 class="text-xl font-bold md:my-0 md:mb-2">{title}</h3>
+<slot/>
+    <div class="py-2 flex flex-col gap-1">
+
+		{repoLink && (
+			<p>
+				<a href={repoLink} target="_blank" rel="noopener noreferrer" class="mt-2">
+					<span class="cactus-link">
+						<span class="me-2"> </span> Repository Link
+					</span>
+				</a>
+			</p>
+		)}
+
+		{webLink1 && !webLink2 && (
+			<p>
+				<a href={webLink1} target="_blank" rel="noopener noreferrer" class="mt-2">
+					<span class="cactus-link">
+						<span class="me-2"> </span> WebSite Link
+					</span>
+				</a>
+			</p>
+		)}
+
+		{webLink1 && webLink2 && (
+			<p>
+				<a href={webLink1} target="_blank" rel="noopener noreferrer" class="mt-2">
+					<span class="cactus-link">
+						<span class="me-2"> </span> Vanilla JS WebSite Link
+					</span>
+				</a>
+			</p>
+    <p>
+				<a href={webLink2} target="_blank" rel="noopener noreferrer" class="mt-2">
+					<span class="cactus-link">
+						<span class="me-2"> </span> React JS Website Link
+					</span>
+				</a>
+</p>
+
+		)}
+    </div>
+	</div>
+</div>
