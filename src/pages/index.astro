@@ -10,8 +10,6 @@ import ProjectsSection from "@/components/ProjectsSection.astro";
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
-
 ---
 
 <PageLayout meta={{ title: "dPenedo" }}>
@@ -30,39 +28,57 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</h1>
 	</section>
 	<p class="mb-4">
-		I am a Basque Web Developer based in Argentina, welcome to my portfolio and blog. I have experience working and studying in diverse environments, and my current focus is on web
-		development. I have a Diploma on Full Stack develpment on Django and on Spring Boot development, both from the UTN (National Technological University -
-		Universidad Tecnológica Nacional in Argentina).
-	</p>
+		I am a Basque Web Developer based in Argentina, welcome to my portfolio and blog. I have
+		experience working and studying in diverse environments, and my current focus is on web
+		development. I have a Diploma on Full Stack develpment on <b class="text-quote">Django</b> and on
+		<b class="text-quote">Spring Boot </b> development, both from the National Technological University (UTN) in Argentina.	</p>
 	<SocialList />
 
+	<!-- ========== Technologies  ========== -->
+	<section class="mt-16">
+		<h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Technologies</h2>
+		<p class="my-1 gap-2">
+			<span class="text-accent">##</span><b> Primary Programming languages: </b> My main languages are
+			<b class="text-quote">Python.</b>, <b class="text-quote">Java</b>, and <b class="text-quote"
+				>JavaScript</b
+			>.
+		</p>
+		<p class="my-1 gap-2">
+			<span class="text-accent">##</span><b> Back End Technologies: </b>
+			<b class="text-quote">Django (my primary back-end framework)</b> and <b class="text-quote">Spring Boot</b>.
+			<p class="my-1 gap-2">
+				<span class="text-accent">##</span><b> Front End Technologies: </b>
+				<b class="text-quote">React</b>, Next, Astro, <b class="text-quote">Tailwind</b>, <b
+					class="text-quote">SASS</b
+				> and Bootstrap.
+				<p class="my-1 gap-2">
+					<span class="text-accent">##</span><b> Linux & Bash Scripting: </b>Proficient in Linux
+					command line, <b class="text-quote">Bash/Zsh</b> scripting and <b class="text-quote">
+						GIT</b
+					> version control.
+					<p class="my-1 gap-2">
+						<span class="text-accent">##</span><b> Design Tools: </b> Figma, Gimp and Inkscape
+					</p>
+					<!-- ========== Technologies   ========== -->
 
+					<ProjectsSection />
 
-    <!-- ========== Technologies  ========== -->
-<section class="mt-16">
-    <h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Technologies</h2>
-    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Primary Programming languages: </b> My main languages are <b class="text-quote">Python.</b>, <b class="text-quote">Java</b>, and <b class="text-quote">JavaScript</b>. </p>
-    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Front End Technologies: </b> <b class="text-quote">React</b>, Astro, <b class="text-quote">Tailwind</b>, <b class="text-quote">SASS</b> and Bootstrap.
-    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Back End Technologies: </b> <b class="text-quote">Django</b>, <b class="text-quote">Spring</b> and Node.JS.
-    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Linux & Bash Scripting: </b>Proficient in Linux command line, <b class="text-quote">Bash/Zsh</b> scripting and <b class="text-quote"> GIT</b> version control.
-    <p class="my-1 gap-2"> <span class="text-accent">##</span><b> Design Tools: </b> Figma, Gimp and Inkscape
-</section>
-    <!-- ========== Technologies   ========== -->
-
-  <ProjectsSection />
-
-    <!-- ========== Posts  ========== -->
-<section aria-label="Blog post list" class="mt-16">
-	<h2 class="title mb-4 text-2xl"><span class="text-accent"># </span> Blog Posts</h2>
-	<ul class="space-y-4">
-		{
-			allPostsByDate.map((p) => (
-				<li class="flex flex-col gap-x-2 sm:flex-row">
-					<PostPreview post={p} />
-				</li>
-			))
-		}
-	</ul>
-</section>
-    <!-- ========== Posts   ========== -->
-</PageLayout>
+					<!-- ========== Posts  ========== -->
+					<section aria-label="Blog post list" class="mt-16">
+						<h2 class="title mb-4 text-2xl"><span class="text-accent"># </span> Blog Posts</h2>
+						<ul class="space-y-4">
+							{
+								allPostsByDate.map((p) => (
+									<li class="flex flex-col gap-x-2 sm:flex-row">
+										<PostPreview post={p} />
+									</li>
+								))
+							}
+						</ul>
+					</section>
+					<!-- ========== Posts   ========== -->
+				</p>
+			</p>
+		</p>
+	</section></PageLayout
+>

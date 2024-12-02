@@ -7,8 +7,8 @@ import doggyCapt from "/public/captura-doggy.png";
 import aprovechappCapt from "/public/captura-aprovechapp.png";
 import tuveterinariaCapt from "/public/captura-tuveterinaria.png";
 import chronoscriptCapt from "/public/captura-chronoscript.webp";
-import Project from './Project.astro'
-
+import todolistCapt from "/public/captura-todolist.webp";
+import Project from "./Project.astro";
 ---
 
 <section class="mt-16">
@@ -17,75 +17,120 @@ import Project from './Project.astro'
 	<div>
 		<h2 class="title mb-4 text-xl"><span class="text-accent">##</span> Web Developmnet</h2>
 
+		<!--Escuela de columna-->
+		<Project
+			img={escuelaDeColumnaCapt}
+			title="Escuela de Columna - Professional Website"
+			webLink1="https://escuela-de-columna.vercel.app"
+		>
+			<p>
+				A website created for a multidisciplinary team of healthcare professionals, including
+				physiotherapists and doctors. This project was developed using the <b class="text-quote"
+					>Next.js</b
+				> framework for
+				<b class="text-quote">React</b> and <b class="text-quote">Tailwind CSS</b>.
+			</p>
+		</Project>
 
+		<!-- Albert -->
+		<Project
+			img={albertCapt}
+			title="Albert Martin -  Professional Website"
+			webLink1="https://albertmediador.com"
+		>
+			<p>
+				A psychologist and mediator's Website. I also made the dessign, It's static and built with <b
+					class="text-quote">Bootstrap</b
+				>.
+			</p>
+		</Project>
 
-    <!--Escuela de columna-->
-    <Project img = {escuelaDeColumnaCapt} title="Escuela de Columna - Professional Website" webLink1 = "https://escuela-de-columna.vercel.app" >
-				<p>
-					A website created for a multidisciplinary team of healthcare professionals, including
-physiotherapists and doctors. This project was developed using the <b class="text-quote">Next.js</b> framework for
-          <b class="text-quote">React</b> and <b class="text-quote">Tailwind CSS</b>.
-				</p>
-    </Project>
+		<!--ChronoScript-->
+		<Project
+			img={chronoscriptCapt}
+			title="ChronoScript"
+			repoLink="https://github.com/dPenedo/chronoscript"
+			webLink1="https://chronoscript-react.netlify.app/"
+			webLink2="https://chronoscript-js.netlify.app/"
+		>
+			<p>
+				ChronoScript is a web application developed in two versions: one using <b class="text-quote"
+					>Vanilla JavaScript</b
+				>, HTML, and CSS, and the other with <b class="text-quote">React</b> and <b
+					class="text-quote">TypeScript</b
+				> using <b class="text-quote">Vite</b>. Both versions include three sections: Stopwatch,
+				Countdown, and World-times (by consuming an API). They also utilize <b class="text-quote"
+					>Jest</b
+				> for testing.
+			</p>
+		</Project>
 
+		<Project
+			img={tuveterinariaCapt}
+			title="tuVeterinaria - Django Ecommerce"
+			repoLink="https://github.com/dPenedo/tuveterinaria"
+		>
+			<p>
+				An ecommerce site built with <b class="text-quote">Django</b> Framework, featuring an SQLite
+				database and user authentication. It was my final project for the UTN diploma on Django Full
+				Stack development.
+			</p>
+		</Project>
 
-    <!-- Albert -->
-    <Project img = {albertCapt} title="Albert Martin -  Professional Website"   webLink1 = "https://albertmediador.com" >
-				<p>
-          A psychologist and mediator's Website. I also made the dessign, It's static and built with <b class="text-quote">Bootstrap</b>.
-				</p>
-    </Project>
+		<Project
+			img={aprovechappCapt}
+			title="AprovechÁpp! - Spring WebApp"
+			repoLink="https://github.com/dPenedo/aprovechapp"
+		>
+			<p>
+				A Web App built with the Spring Framework. It was my final project for the UTN diploma on <b
+					class="text-quote">Spring Boot</b
+				> development.
+			</p>
+		</Project>
 
-    <!--ChronoScript-->
-    <Project img = {chronoscriptCapt} title="ChronoScript"  repoLink="https://github.com/dPenedo/chronoscript" webLink1 = "https://chronoscript-js.netlify.app/" webLink2 = "https://chronoscript-react.netlify.app/" >
-
-				<p>
-    ChronoScript is a web application developed in two versions: one using <b class="text-quote">Vanilla JavaScript</b>, HTML, and CSS, and the other with <b class="text-quote">React</b> and <b class="text-quote">TypeScript</b> using <b class="text-quote">Vite</b>. Both versions include three sections: Stopwatch, Countdown, and World-times (by consuming an API). The Vanilla version utilize <b class="text-quote">Jest</b>, and React one utilize <b class="text-quote">Vitest</b> for testing.
-				</p>
-    </Project>
-
-
-
-
-
-    <Project img = {tuveterinariaCapt} title="tuVeterinaria - Django Ecommerce"  repoLink="https://github.com/dPenedo/tuveterinaria"  >
-
-				<p>
-An ecommerce site built with <b class="text-quote">Django</b> Framework, featuring an SQLite database and user authentication. It was my final project for the UTN diploma on Django Full Stack development.
-				</p>
-    </Project>
-
-    <Project img = {aprovechappCapt} title="AprovechÁpp! - Spring WebApp"  repoLink="https://github.com/dPenedo/aprovechapp"  >
-
-				<p>
-          A Web App built with the Spring Framework. It was my final project for the UTN diploma on <b class="text-quote">Spring Boot</b> development.
-				</p>
-    </Project>
-
-    <Project img = {doggyCapt} title="Doggy - Django WebApp"  repoLink="https://github.com/No-Country/c6-15-ft-python-/"  >
-
-				<p>
-          An online dog boarding service. It's dynamic and built with <b class="text-quote">Django</b> Framework and <b class="text-quote">PostgreeSQL</b>.
-				</p>
-    </Project>
-
-
-
-
-    <!--Python-->
+		<Project
+			img={doggyCapt}
+			title="Doggy - Django WebApp"
+			repoLink="https://github.com/No-Country/c6-15-ft-python-/"
+		>
+			<p>
+				An online dog boarding service. It's dynamic and built with <b class="text-quote">Django</b>
+				Framework and <b class="text-quote">PostgreeSQL</b>.
+			</p>
+		</Project>
+		<Project
+			img={todolistCapt}
+			title="TodoList - Django + React WebApp"
+			repoLink="https://github.com/dPenedo/drf-react-todolist"
+		>
+			<p>
+				A full-stack To-Do List application built with <b class="text-quote"
+					>Django Rest Framework (DRF)</b
+				> and <b class="text-quote">React</b>
+			</p>
+		</Project>
+		<!--Python-->
 		<h2 class="title my-6 mt-8 text-xl"><span class="text-accent">##</span> Python</h2>
 
+		<Project
+			img={pomodoroCapt}
+			title="Pomodoro Desktop App"
+			repoLink="https://github.com/dPenedo/pomodoro"
+		>
+			<p>
+				A Pomodoro timer made in Python using the <b class="text-quote">TkInter</b> library.
+			</p>
+		</Project>
 
-    <Project img = {pomodoroCapt} title="Pomodoro Desktop App"  repoLink="https://github.com/dPenedo/pomodoro"  >
-				<p>
-A Pomodoro timer made in Python using the <b class="text-quote">TkInter</b> library.
-				</p>
-    </Project>
-
-    <Project img = {martzianosCapt} title="Martzianos War"  repoLink="https://github.com/dPenedo/martzianos"  >
-				<p>
-A Space Invaders style game made with the <b class="text-quote">Pygame</b> library.
-				</p>
-    </Project>
+		<Project
+			img={martzianosCapt}
+			title="Martzianos War"
+			repoLink="https://github.com/dPenedo/martzianos"
+		>
+			<p>
+				A Space Invaders style game made with the <b class="text-quote">Pygame</b> library.
+			</p>
+		</Project>
 	</div>
 </section>
