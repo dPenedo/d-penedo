@@ -17,7 +17,7 @@ I tried the following ways:
 
 Finally, I installed the [CLI client](https://github.com/testmycode/tmc-cli) and it worked flawlessly!
 
-### The CLI client
+## The CLI client
 
 First, you'll need to have openjdk-11-jdk installed. On Linux Mint, it's just:
 
@@ -47,7 +47,7 @@ tmx login
 
 And introduce the username (remember that it's the email and password)
 
-### Making it work with Neovim
+## Making it work with Neovim
 
 There is only one problem with it: Java version. It needs JDK 11. In my case, I use Neovim and the plugin called [JDTLS](https://github.com/mfussenegger/nvim-jdtls) that extends the Java language server of Eclipse (it works very very good!), but it needs JDK17 or later. So there was a problem there. I solved it having one in bash and the other on zsh.
 
@@ -65,7 +65,7 @@ export JAVA-HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
 So that way I had different terminal panes or tabs (or in my case tmux windows, it's the same) with different shells. I used bash only for tmc actions.
 
-### Some useful aliases and more
+## Extra ball 🎾: Some useful aliases and more
 
 I used some aliases on my `.bashrc` that made it more comfortable.
 
