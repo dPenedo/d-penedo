@@ -1,9 +1,10 @@
 ---
-title: "Run TestMyCode from Terminal for University of Helsinki Java MOOC course"
+title: "Run TestMyCode from Terminal for Java MOOC course"
 description: "Guide on running TestMyCode from the terminal for the University of Helsinki Java MOOC course."
 publishDate: "15 Jan 2025"
-tags: ["Java", "TestMyCode", "MOOC"]
+tags: ["Java", "TestMyCode", "MOOC", "terminal"]
 ---
+
 
 # Run TestMyCode from Terminal for University of Helsinki Java MOOC course
 
@@ -76,5 +77,3 @@ alias te="tmc exercises mooc-java-programming-i"
 ```
 
 Notice how the `tt` command sends a notification to the system when the tests are done. Which it's pretty usuful to keep reading the course while the tests pass and makes you feel like a real absolute hacker.
-
-Etiquetas: #Java #Blog

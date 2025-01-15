@@ -6,12 +6,11 @@ tags: ["astro", "social"]
 ---
 
 
-## The first post
+# The first post
 
 So this is the first post. It feels a bit anachronistic to start a Blog site in 2024, but, in the last time, I feel like I enjoy much more reading simple blogs than participating on social networks. Also, when I'm looking for information, like, for example, a concept that I didn't understand in the documentation or opinions about tools that I'm evaluating to use, I normally end up on blogs and not on Twitter/X threads, and so on. I have talked about it with other people, and I feel like it's getting very common.
 
 I particularly like the minimal blogs because the experience is very similar to reading a book or a magazine. On social networks, we are exposed to so much random information and very fast-changing subjects. This can make you feel a little overstimulated. Also, I like the idea of the information getting registered for years. It's usual to find information nowadays in blogs written 10 or 15 years ago or even more, and that doesn't happen with social networks. On Twitter/X, for instance, if some information has been around for one or two days, it's considered old, and it hardly gets accessible.
-
 
 ## What kind of content is there going to be?
 
@@ -24,7 +23,6 @@ I have a bunch of notes for future posts, and I can say that they are very diver
 - **Scripts:** Looking back into my notes, I found some scripts that I made and use every day. They are made with Bash and Python, and I use them to automate different things like: tmux sessions, version control, notifications, and so on. So it might be interesting to share them, explain them and put them on separate public GitHub repositories.
 
 - **Workarounds:** When something doesn't work, and I have to think of different alternatives, I (sometimes) document the process. In the future, I will be posting these workarounds, hoping that someone can use them.
-
 
 ## How did I create this Website?
 
