@@ -8,6 +8,7 @@ import aprovechappCapt from "/public/captura-aprovechapp.png";
 import tuveterinariaCapt from "/public/captura-tuveterinaria.png";
 import chronoscriptCapt from "/public/captura-chronoscript.webp";
 import todolistCapt from "/public/captura-todolist.webp";
+import tiendaCeramica from "/public/captura-tienda-ceramica.png"
 import Project from "./Project.astro";
 ---
 
@@ -17,6 +18,16 @@ import Project from "./Project.astro";
 	<div>
 		<h2 class="title mb-4 text-xl"><span class="text-accent">##</span> Web Developmnet</h2>
 
+		<!--Escuela de columna-->
+		<Project
+			img={tiendaCeramica}
+      title="Ceramic Artisan E-Commerce Platform - Template/Showcase"
+			repoLink="https://github.com/dPenedo/ceramic-ecommerce"
+		>
+      <p>
+        An e-commerce platform designed for ceramic artisans, allowing them to showcase and sell unique, handcrafted pieces. The project was developed using <b class="text-quote">Django</b> as the backend framework, <b class="text-quote">Vanilla JavaScript</b> for dynamic interactions on the frontend, and <b class="text-quote">Tailwind CSS</b> for a modern, responsive design.
+      </p>
+		</Project>
 		<!--Escuela de columna-->
 		<Project
 			img={escuelaDeColumnaCapt}
