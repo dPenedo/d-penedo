@@ -7,7 +7,7 @@ tags: ["django", "web development", "python", "context processors", "backend", "
 
 # Managing Django Context and Making It Global with Context Processors
 
-Django makes it very convenient to manage the relationship between backend logic, databases, and the frontend using the Django Template Language (DTL) or your chosen frontend stack if you're using Django Rest Framework (DRF). In Django, `context` refers to variables passed from the *views* (the application logic) to the frontend. The most common way to pass these variables is by using Python dictionaries.
+Django makes it very convenient to manage the relationship between backend logic, databases, and the frontend using the Django Template Language (DTL) or your chosen frontend stack if you're using Django Rest Framework (DRF). In Django, `context` refers to variables passed from the _views_ (the application logic) to the frontend. The most common way to pass these variables is by using Python dictionaries.
 
 ## Using Django Template Language (DTL)
 
@@ -33,21 +33,20 @@ def my_view(request):
 
 Then, in the template:
 
-```htmldjango
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html>
-<head>
-    <title>My Template</title>
-</head>
-<body>
-    <h1>Hi, {{ name }}!</h1>
-    <p>Your website is https://{{ website }}</p>
-    <p>Your preferred activities are:
-        {% for activity in activities %}
-            {{ activity }}{% if not forloop.last %}, {% endif %}
-        {% endfor %}.
-    </p>
-</body>
+	<head>
+		<title>My Template</title>
+	</head>
+	<body>
+		<h1>Hi, {{ name }}!</h1>
+		<p>Your website is https://{{ website }}</p>
+		<p>
+			Your preferred activities are: {% for activity in activities %} {{ activity }}{% if not
+			forloop.last %}, {% endif %} {% endfor %}.
+		</p>
+	</body>
 </html>
 ```
 
@@ -128,11 +127,11 @@ Once you've added your context processor, you can access the variables in any te
 
 For example, you can use them in a details.html template:
 
-```htmldjango
+```html
 {% if product.id in cart_items and cart_items[product.id] >= product.stock %}
-    <p class="text-danger">You can't add more items of this product.</p>
+<p class="text-danger">You can't add more items of this product.</p>
 {% else %}
-    <button class="btn btn-primary">Add to Cart</button>
+<button class="btn btn-primary">Add to Cart</button>
 {% endif %}
 ```
 

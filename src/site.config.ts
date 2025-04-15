@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   // Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
   author: "Daniel Penedo Lázaro",
   // Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-  title: "dPenedo - Daniel Penedo Lázaro",
+  title: "Daniel Penedo Lázaro | Full-Stack Developer",
   // Meta property used as the default description meta property
   description: "I'm Daniel Penedo Lázaro, a web developer specializing in building modern websites and applications using Django, React, Astro, and TypeScript. With a passion for Linux, open-source technologies, and efficient programming, I share insights and projects that combine innovation and best practices in web development.",
   // HTML lang property, found in src/layouts/Base.astro L:18
@@ -22,14 +22,14 @@ export const siteConfig: SiteConfig = {
     },
   },
   webmentions: {
-    link: "https://www.dpenedo.com",
+    link: "https://dpenedo.com",
   },
 };
 
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
   {
-    title: "dPenedo",
+    title: "Home",
     path: "/",
   },
   {
@@ -68,6 +68,6 @@ export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
     borderRadius: "4px",
     codePaddingInline: "1rem",
     codeFontFamily:
-      'FiraCode Nerd Font, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
+      'Hack Nerd Font, FiraCode Nerd Font, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
   },
 };

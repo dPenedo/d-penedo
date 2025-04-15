@@ -3,41 +3,42 @@
 @tailwind utilities;
 
 @layer base {
-	:root,
-	:root[data-theme="light"] {
-		color-scheme: light;
-		/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
-		--theme-bg: 0deg 0% 98%;
-		/* --theme-link: 172deg 18% 41%; */
-		/* --theme-link: 281 10% 37%; */
-		--theme-link: 28 77% 44%;
-		--theme-text: 203deg 11% 15%;
-		--theme-accent: 156 28% 25%;
-		--theme-accent-2: 0deg 0% 7%;
-		--theme-quote: 28 77% 44%;
-	}
 
-	:root[data-theme="dark"] {
-		color-scheme: dark;
-		--theme-bg: 210deg 6% 6%;
-		/* --theme-link: 45 100% 58%; */
-		--theme-link: 28 77% 44%;
-		--theme-text: 220deg 3% 79%;
+  :root,
+  :root[data-theme="light"] {
+    color-scheme: light;
+    /* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
+    --theme-bg: 0deg 0% 98%;
+    /* --theme-link: 172deg 18% 41%; */
+    /* --theme-link: 281 10% 37%; */
+    --theme-link: 28 77% 44%;
+    --theme-text: 203deg 11% 15%;
+    --theme-accent: 156 28% 25%;
+    --theme-accent-2: 0deg 0% 7%;
+    --theme-quote: 28 77% 44%;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --theme-bg: 210deg 6% 6%;
+    /* --theme-link: 45 100% 58%; */
+    --theme-link: 28 77% 44%;
+    --theme-text: 220deg 3% 79%;
     /*TODO: too bright?*/
-		--theme-accent: 156 28% 50%;
-		--theme-accent-2: 0deg 0% 93%;
-		--theme-quote: 102deg 100% 86%;
-	}
+    --theme-accent: 156 28% 50%;
+    --theme-accent-2: 0deg 0% 93%;
+    --theme-quote: 102deg 100% 86%;
+  }
 
-	html {
-		@apply scroll-smooth;
-	}
+  html {
+    @apply scroll-smooth;
+  }
 
-	body {
-		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-8 pt-16 font-mono text-sm font-normal text-textColor antialiased;
-		font-family: "Hack Nerd Font", "FiraCode Nerd Font", monospace;
-		font-size: 0.97rem;
-		/* font-family: "FiraCode Nerd Font", monospace; */
-		/* font-family: "Lora", monospace; */
-	}
+  body {
+    @apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-8 pt-16 font-mono text-sm font-normal text-textColor antialiased;
+    font-family: "Atkinson Hyperlegible", "Atkinson Hyperlegible", "Hack Nerd Font", "FiraCode Nerd Font", monospace;
+    font-size: 0.97rem;
+    /* font-family: "FiraCode Nerd Font", monospace; */
+    /* font-family: "Lora", monospace; */
+  }
 }
