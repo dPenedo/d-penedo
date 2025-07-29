@@ -1,5 +1,6 @@
 ---
-import pomodoroCapt from "/public/captura-pomodoro.png"; // Adjust the path as per your folder structure
+import scrapingCapt from "/public/captura-scraping.png";
+import pomodoroCapt from "/public/captura-pomodoro.png";
 import martzianosCapt from "/public/captura-martzianos.png";
 import albertCapt from "/public/captura-alber.png";
 import escuelaDeColumnaCapt from "public/captura-escuela-col.webp";
@@ -19,6 +20,21 @@ import Project from "./Project.astro";
 	<div>
 		<h2 class="title mb-4 text-xl"><span class="text-accent">##</span> Web Developmnet</h2>
 
+<Project
+	img={scrapingCapt}
+	title="News Scraper — News Metadata Scraper for Sociological Research"
+	repoLink="https://github.com/dPenedo/news_scraper"
+>
+	<p>
+		A Python-based web scraper that extracts news headlines, URLs, and metadata from major local
+		news outlets in Mar del Plata. Runs daily as an <b class="text-quote">AWS Lambda</b> function and
+		stores data in <b class="text-quote">S3</b> for further analysis.
+	</p>
+	<p>
+		Built using <b class="text-quote">BeautifulSoup</b>, <b class="text-quote">Requests</b>, and
+		<b class="text-quote">Python logging</b>. The project follows a <b class="text-quote">class-based architecture</b> for maintainability and scalability.
+	</p>
+</Project>
 		<Project
 			img={matafuegos}
 			title="Matafuegos Mar del Plata - Professional Website"
