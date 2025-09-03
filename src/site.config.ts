@@ -5,9 +5,9 @@ export const siteConfig: SiteConfig = {
   // Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
   author: "Daniel Penedo Lázaro",
   // Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-  title: "Daniel Penedo Lázaro | Full-Stack Developer",
+  title: "Daniel Penedo Lázaro | Web & Data Developer",
   // Meta property used as the default description meta property
-  description: "I'm Daniel Penedo Lázaro, a web developer specializing in building modern websites and applications using Django, React, Astro, and TypeScript. With a passion for Linux, open-source technologies, and efficient programming, I share insights and projects that combine innovation and best practices in web development.",
+  description: "I'm Daniel Penedo Lázaro, a web and data developer specializing in building modern websites and applications with Django, React, Astro, and TypeScript. I also work on data automation and visualization projects using Python, Pandas, and Streamlit. Passionate about Linux, open-source technologies, and efficient programming, I share insights and projects that combine innovation, automation, and best practices in development.",
   // HTML lang property, found in src/layouts/Base.astro L:18
   lang: "en-GB",
   // Meta property, found in src/components/BaseHead.astro L:42

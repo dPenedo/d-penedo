@@ -1,5 +1,6 @@
 ---
 import type { SiteMeta } from "@/types";
+
 import BaseHead from "@/components/BaseHead.astro";
 import SkipLink from "@/components/SkipLink.astro";
 import ThemeProvider from "@/components/ThemeProvider.astro";
@@ -9,12 +10,10 @@ import { siteConfig } from "@/site-config";
 
 interface Props {
 	meta: SiteMeta;
-	fullWidth?: boolean; // ← AÑADE esta prop
 }
 
 const {
 	meta: { articleDate, lang, description = siteConfig.description, ogImage, title },
-	fullWidth = false, // ← Valor por defecto
 } = Astro.props;
 ---
 
@@ -22,33 +21,13 @@ const {
 	<head>
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
 	</head>
-	<body
-		class:list={[
-			"max-w-screen w-full",
-			fullWidth ? "full-width-layout" : "default-layout", // ← Clase condicional
-		]}
-	>
+	<body class="max-w-screen w-full px-2">
 		<ThemeProvider />
 		<SkipLink />
 		<Header />
-		<main id="main" class:list={[fullWidth ? "mx-0 w-full max-w-none px-0" : ""]}>
+		<main id="main">
 			<slot />
 		</main>
 		<Footer />
-	</body><style>
-		/* Estilos específicos para layout full-width */
-		body.full-width-layout main {
-			width: 100%;
-			max-width: none;
-			margin: 0;
-			padding: 0;
-		}
-
-		body.full-width-layout iframe {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			display: block;
-		}
-	</style>
+	</body>
 </html>

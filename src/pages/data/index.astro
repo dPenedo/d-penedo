@@ -1,0 +1,49 @@
+---
+// src/pages/data/index.astro
+import scrapingCapt from "/public/captura-scraping.png";
+import sociometroCapt from "/public/captura-sociometro.png";
+import PageLayout from "@/layouts/Base.astro";
+import Project from "../../components/Project.astro";
+---
+
+<PageLayout meta={{ title: "Data Projects" }}>
+	<section class="flex flex-col">
+		<h1 class="title my-6">Data Projects</h1>
+
+		<p class="mb-4">
+			Here you can explore my data-driven projects, dashboards, and automation tools.
+		</p>
+
+		<Project
+			img={sociometroCapt}
+			title="Basque Sociometer - Official Survey Data Analysis App"
+			repoLink="https://github.com/dPenedo/sociometro-vasco"
+			webLink1="https://dpenedo.com/sociometro-vasco"
+		>
+			<p>
+				A data analysis application built on official periodic studies of the Basque population
+				developed with <b class="text-quote">Python</b>, <b class="text-quote">Pandas</b> for data processing,
+				and <b class="text-quote">Plotly</b> & <b class="text-quote">Streamlit</b> for interactive visualizations
+				and deployment. Features interactive filtering by age, sex, social class, education level, and
+				knowledge of the Basque language (<i>Euskera</i>).
+			</p>
+		</Project>
+		<Project
+			img={scrapingCapt}
+			title="News Scraper — News Metadata Scraper for Sociological Research"
+			repoLink="https://github.com/dPenedo/news_scraper"
+		>
+			<p>
+				A Python-based web scraper that extracts news headlines, URLs, and metadata from major local
+				news outlets in Mar del Plata. Runs daily as an <b class="text-quote">AWS Lambda</b> function
+				and stores data in <b class="text-quote">S3</b> for further analysis.
+			</p>
+			<p>
+				Built using <b class="text-quote">BeautifulSoup</b>, <b class="text-quote">Requests</b>, and
+				<b class="text-quote">Python logging</b>. The project follows a <b class="text-quote"
+					>class-based modular architecture</b
+				> for maintainability and scalability.
+			</p>
+		</Project>
+	</section>
+</PageLayout>

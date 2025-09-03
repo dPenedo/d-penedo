@@ -1,0 +1,48 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+---
+
+<PageLayout meta={{ title: "Euskal Soziometroa", lang: "eus" }} fullWidth={true}>
+	<section class="mx-0 w-full px-0">
+		<h1 class="title my-6">Euskal Soziometroaren Azterketa</h1>
+		<p>
+			<a
+				href="https://www.euskadi.eus/sociometros-vascos/web01-s1lehike/eu/"
+				target="_blank"
+				class="cactus-link">Euskal Soziometroa</a
+			> ikerketa ofiziala da, <strong>1996</strong>tik aurrera aldizka egiten dena. Kasu honetan,
+			datuak <strong>2025eko uztailarenak</strong> dira.
+		</p>
+
+		<p>
+			Inkesta datuak <strong>CSV</strong> formatuan partekatzen dira, <a
+				href="https://www.euskadi.eus/estudios-sociologicos-ficheros-datos/web01-s1lehike/eu/"
+				target="_blank"
+				class="cactus-link">esteka hemen</a
+			>.
+		</p>
+
+		<p>
+			Guztira 11 grafiko daude, 3 ataletan banatuta: orientazio politikoa, nortasun nazionalaren
+			sentimendua eta egoera ekonomiko-politikoa. Grafikoetan honako iragazkiak aplika daitezke:
+		</p>
+
+		<ul class="mx-6 my-4 max-w-md list-inside list-disc space-y-1">
+			<li class="list-disc">Sexua</li>
+			<li class="list-disc">Adina</li>
+			<li class="list-disc">Ikasketa maila</li>
+			<li class="list-disc">Autoperzibatutako gizarte klasea</li>
+			<li class="list-disc">Euskararen maila</li>
+		</ul>
+		<p>
+			Iragazkiak ez badaude zabalik, goiko ezkerrean dagoen <code class="text-quote">>></code> ikonoan
+			klik eginez zabal daitezke
+		</p>
+		<iframe
+			id="sociometerFrame"
+			width="100%"
+			height="700"
+			style="border: none; border-radius: 8px;"
+			src="https://sociometro-vasco.streamlit.app/?lang=eus&embed=true"></iframe>
+	</section>
+</PageLayout>

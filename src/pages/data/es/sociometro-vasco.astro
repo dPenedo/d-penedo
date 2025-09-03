@@ -1,0 +1,49 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+---
+
+<PageLayout meta={{ title: "Sociómtro vasco", lang: "es-ES" }} fullWidth={true}>
+	<section class="flex flex-col">
+		<h1 class="title my-6">Análisis del Sociómetro Vasco</h1>
+		<p>
+			El <a
+				href="https://www.euskadi.eus/sociometros-vascos/web01-s1lehike/es/"
+				target="_blank"
+				class="cactus-link">Sociómetro vasco</a
+			>, es un estudio periódico oficial que realiza un cuestionario sobre una población amplia
+			desde <strong>1996</strong>. En este caso los datos son de <strong>Julio del 2025</strong>.
+		</p>
+
+		<p>
+			Los datos de la encuesta son compartidos en formato <strong>CSV</strong>, <a
+				href="https://www.euskadi.eus/estudios-sociologicos-ficheros-datos/web01-s1lehike/es/"
+				target="_blank"
+				class="cactus-link">aquí el enlace</a
+			>.
+		</p>
+
+		<p>
+			Hay un total de 11 gráficos en total divididos en 3 secciones: orientación política,
+			sentimiento de identidad nacional y situación económica y política. A ellos se les pueden
+			aplicar los siguientes filtros:
+		</p>
+
+		<ul class="mx-6 my-4 max-w-md list-inside list-disc space-y-1">
+			<li class="list-disc">Sexo</li>
+			<li class="list-disc">Edad</li>
+			<li class="list-disc">Nivel de estudios finalizados</li>
+			<li class="list-disc">Clase social autopercibida</li>
+			<li class="list-disc">Nivel de euskera</li>
+		</ul>
+		<p>
+			En el caso de que los filtros no estén abiertos, se pueden abrir en la parte superior
+			izquierda (con el ícono <code class="text-quote">>></code>)
+		</p>
+		<iframe
+			id="sociometerFrame"
+			width="100%"
+			height="1000"
+			style="border: none; border-radius: 8px;"
+			src="https://sociometro-vasco.streamlit.app/?lang=es&embed=true"></iframe>
+	</section>
+</PageLayout>
