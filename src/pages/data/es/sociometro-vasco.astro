@@ -4,10 +4,23 @@ import PageLayout from "@/layouts/Base.astro";
 
 <PageLayout meta={{ title: "Sociómetro vasco", lang: "es-ES" }} fullWidth={true}>
 	<section class="flex flex-col">
-		<div class="mb-4 text-right">
-      <a href="/data/eus/sociometro-vasco" class="cactus-link font-semibold">Eus</a><span
-				class="opacity-50">| Es</span
+		<div class="mb-4 flex justify-end gap-2">
+			<!-- idioma activo -->
+			<a
+				href="/data/eus/sociometro-vasco"
+				class="rounded-full px-2 py-1 font-semibold"
+				style="background-color: var(--lang-active-bg); color: var(--lang-active-text);"
 			>
+				Eus
+			</a>
+
+			<!-- enlace para cambiar idioma -->
+			<span
+				class="rounded-full px-2 py-1 font-semibold"
+				style="background-color: var(--lang-link-bg); color: var(--lang-link-text);"
+			>
+				Es
+			</span>
 		</div>
 		<h1 class="title my-6">Análisis del Sociómetro Vasco</h1>
 		<p>

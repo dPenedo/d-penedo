@@ -16,6 +16,10 @@
     --theme-accent: 156 28% 25%;
     --theme-accent-2: 0deg 0% 7%;
     --theme-quote: 28 77% 44%;
+--lang-active-bg: hsl(var(--theme-bg));
+  --lang-active-text: hsl(var(--theme-text));
+  --lang-link-bg: hsl(var(--theme-accent));
+  --lang-link-text: hsl(0, 0%, 100%);
   }
 
   :root[data-theme="dark"] {
@@ -28,6 +32,10 @@
     --theme-accent: 156 28% 50%;
     --theme-accent-2: 0deg 0% 93%;
     --theme-quote: 102deg 100% 86%;
+  --lang-active-bg: hsl(var(--theme-bg));
+  --lang-active-text: hsl(var(--theme-text));
+  --lang-link-bg: hsl(var(--theme-accent));
+  --lang-link-text: hsl(0, 0%, 100%);
   }
 
   html {
@@ -45,5 +53,6 @@
 body.full-width-layout {
   @apply mx-auto max-w-7xl px-4 pt-8; /* Márgenes mínimos pero existentes */
 }
+
 }
 
