@@ -1,4 +1,5 @@
 ---
+import basqueMediaCapt from "/public/captura-basquemedia.png";
 import scrapingCapt from "/public/captura-scraping.png";
 import pomodoroCapt from "/public/captura-pomodoro.png";
 import martzianosCapt from "/public/captura-martzianos.png";
@@ -22,6 +23,23 @@ import Project from "./Project.astro";
 		<h2 class="title mb-4 text-xl"><span class="text-accent">##</span> Data Projects</h2>
 		<!-- <h2 class="title mb-4 text-xl"><a class="cactus-link" href="/data"><span class="text-accent">##</span> Data Projects</a></h2> -->
 
+<Project
+	img={basqueMediaCapt}
+	title="Basque Media Scraper — Multi-Source News Data Pipeline"
+	repoLink="https://github.com/dPenedo/basque_media"
+>
+	<p>
+		A <b class="text-quote">Python</b>-based web scraping system that collects headlines from
+		<b class="text-quote">13 Basque and Spanish media outlets</b>, storing them in a
+		<b class="text-quote">PostgreSQL</b> database with automatic duplicate prevention.
+	</p>
+	<p>
+		The project features a <b class="text-quote">modular object-oriented architecture</b>, supports both
+		<b class="text-quote">database</b> and <b class="text-quote">CSV</b> storage modes, and includes
+		<b class="text-quote">database views</b> for real-time statistics. It runs daily on a
+		<b class="text-quote">VPS via Docker</b> with cron automation for continuous data collection.
+	</p>
+</Project>
 		<Project
 			img={sociometroCapt}
 			title="Basque Sociometer - Official Survey Data Analysis App"
