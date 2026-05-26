@@ -25,6 +25,26 @@ import Project from "./Project.astro";
 		<!-- <h2 class="title mb-4 text-xl"><a class="cactus-link" href="/data"><span class="text-accent">##</span> Data Projects</a></h2> -->
 
 		<Project
+			img={scrapingCapt}
+			title="News Scraper — Argentine Media Data Pipeline"
+			repoLink="https://github.com/dPenedo/news_scraper"
+			webLink1="https://humanidades.mdp.edu.ar/secretarias-subsecretarias/secretaria-de-transferencia-vinculacion-internacional-e-innovacion/observatorios/ospo/"
+			webLinkTitle1="OSPO Research Group"
+		>
+			<p>
+				A <b class="text-quote">Python</b>-based web scraper that collects headlines, URLs, and metadata from
+				<b class="text-quote">9 Argentine news outlets</b> — local Mar del Plata media and national sources
+				(Clarín, La Nación, Página 12, Infobae). Developed for the <b class="text-quote">OSPO sociological research group</b>
+				at the Universidad de Mar del Plata. Runs daily on a <b class="text-quote">VPS</b> and stores results in CSV files.
+			</p>
+			<p>
+				Built with <b class="text-quote">BeautifulSoup</b> and <b class="text-quote">Requests</b>, object-oriented modular
+				architecture, a <b class="text-quote">Cloudflare Worker proxy</b> to bypass IP blocks,
+				<b class="text-quote">Docker</b> for deployment, and tests via <b class="text-quote">pytest</b>.
+			</p>
+		</Project>
+
+		<Project
 			img={basqueMediaCapt}
 			title="Basque Media Scraper — Multi-Source News Data Pipeline"
 			repoLink="https://github.com/dPenedo/basque_media"
@@ -60,23 +80,6 @@ import Project from "./Project.astro";
 			</p>
 		</Project>
 
-		<Project
-			img={scrapingCapt}
-			title="News Scraper — News Metadata Scraper for Sociological Research"
-			repoLink="https://github.com/dPenedo/news_scraper"
-		>
-			<p>
-				A Python-based web scraper that extracts news headlines, URLs, and metadata from major local
-				news outlets in Mar del Plata. Runs daily as an <b class="text-quote">AWS Lambda</b> function
-				and stores data in <b class="text-quote">S3</b> for further analysis.
-			</p>
-			<p>
-				Built using <b class="text-quote">BeautifulSoup</b>, <b class="text-quote">Requests</b>, and
-				<b class="text-quote">Python logging</b>. The project follows a <b class="text-quote"
-					>class-based modular architecture</b
-				> for maintainability and scalability.
-			</p>
-		</Project>
 
 		<h2 class="title mb-4 text-xl"><span class="text-accent">##</span> AI & Automation Projects</h2>
 
@@ -102,7 +105,7 @@ import Project from "./Project.astro";
 		</Project>
 
 		<h2 class="title mb-4 text-xl">
-			<span class="text-accent">##</span> Professional Web Development
+			<span class="text-accent">##</span> Freelance / Client Work
 		</h2>
 
 		<Project
