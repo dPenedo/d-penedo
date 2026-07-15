@@ -6,7 +6,6 @@ tags: ["Python", "Plotly", "Data science", "Translations"]
 ---
 
 
-# How to Create Translations in a Python Streamlit Application with Plotly Charts
 
 Streamlit, like other similar frameworks, allows you to build web applications with just Python code and display charts created with Matplotlib or Plotly interactively.
 

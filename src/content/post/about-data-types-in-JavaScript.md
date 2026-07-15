@@ -5,7 +5,6 @@ publishDate: "29 Oct 2024"
 tags: ["JavaScript", "types"]
 ---
 
-# Data Types in JavaScript
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), is a weakly typed and dynamic language. Variables can change their type during execution (a feature modified in [TypeScript](https://www.typescriptlang.org/)).
 

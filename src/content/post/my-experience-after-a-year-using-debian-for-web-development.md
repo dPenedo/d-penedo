@@ -5,7 +5,6 @@ publishDate: "11 December 2024"
 tags: ["linux", "web development", "Debian", "Fedora"]
 ---
 
-# My Experience After a Year Using Debian for Web Development
 
 For the past year, I've been using **Debian (stable)** on my computer for web development, and I have some thoughts about it. I've learned a lot and can totally understand why some people absolutely love Debian. However, from now on, I'm going back to **Fedora**.
 

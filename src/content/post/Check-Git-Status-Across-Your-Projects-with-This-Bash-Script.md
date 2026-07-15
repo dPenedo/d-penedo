@@ -7,7 +7,6 @@ tags:
   - "scripting"
 ---
 
-# Check Git Status Across All Your Projects with This Bash Script
 
 I usually work across multiple computers for both personal and professional projects, so I keep (almost) everything on GitHub. There, I store not only software projects but also my notes (organized using the Zettelkasten method — more on that in a future post!). I also host various personal files, such as music sheets that I edit with MuseScore. Another key repository is a directory with all my configuration files (`dotfiles`) for tools I use daily — Neovim, tiling window managers, bash, zsh, terminals, and more. I manage these using the legendary GNU tool `stow`.
 

@@ -6,7 +6,6 @@ tags: ["Java", "TestMyCode", "MOOC", "terminal"]
 ---
 
 
-# Run TestMyCode from Terminal for University of Helsinki Java MOOC course
 
 A while ago, I took the [Java course from the University of Helsinki](https://java-programming.mooc.fi/). It's highly recommended, with great explanations, exercises, and a pedagogical approach. However, I faced several issues with the implementation of the TestMyCode service in different IDEs/text editors. I documented the process, so I'll explain the different methods I tried. Next, I'll explain how to install the CLI version. It requires a workaround for Java versions, but it works well in the end. I'll also share some snippets I created to make the process more pleasant.
 

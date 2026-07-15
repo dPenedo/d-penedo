@@ -10,7 +10,6 @@ tags:
   - scripting
 ---
 
-# Managing Reusable AI Prompts with a Bash Script and Rofi
 
 ## Why Use It
 

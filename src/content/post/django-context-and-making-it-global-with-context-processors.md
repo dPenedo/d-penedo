@@ -5,7 +5,6 @@ publishDate: "6 Feb 2025"
 tags: ["django", "web development", "python", "context processors", "backend", "frontend"]
 ---
 
-# Managing Django Context and Making It Global with Context Processors
 
 Django makes it very convenient to manage the relationship between backend logic, databases, and the frontend using the Django Template Language (DTL) or your chosen frontend stack if you're using Django Rest Framework (DRF). In Django, `context` refers to variables passed from the _views_ (the application logic) to the frontend. The most common way to pass these variables is by using Python dictionaries.
 
