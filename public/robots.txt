@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dpenedo.com/sitemap.xml
+Sitemap: https://www.dpenedo.com/sitemap-index.xml
