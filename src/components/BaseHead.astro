@@ -72,6 +72,13 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 {/* RSS auto-discovery */}
 <link href="/rss.xml" rel="alternate" title={siteConfig.title} type="application/rss+xml" />
 
+{/* Analytics (GoatCounter, sin cookies; ignora localhost por defecto) */}
+<script
+	is:inline
+	data-goatcounter="https://dpenedo.goatcounter.com/count"
+	async
+	src="https://gc.zgo.at/count.js"></script>
+
 {/* Webmentions */}
 {
 	siteConfig.webmentions && (

@@ -24,10 +24,12 @@
 
 ## Fase 0 — Medir (esta semana, ~1 hora)
 
-- [ ] Añadir analytics ligero y sin cookies (GoatCounter, Umami o Plausible) en
-      `src/components/BaseHead.astro`.
-- [ ] Dar de alta dpenedo.com en **Google Search Console** y enviar el sitemap
-      (ya se genera con `@astrojs/sitemap`).
+- [x] Añadir analytics ligero y sin cookies (GoatCounter, Umami o Plausible) en
+      `src/components/BaseHead.astro`. _Hecho el 16 jul 2026: GoatCounter
+      (dpenedo.goatcounter.com), pendiente de desplegar._
+- [x] Dar de alta dpenedo.com en **Google Search Console** y enviar el sitemap
+      (ya se genera con `@astrojs/sitemap`). _Hecho el 15 jul 2026: sitemap enviado y
+      leído, estado "Correcto", 40 páginas descubiertas._
 - [ ] En 2-4 semanas: revisar con qué consultas aparece la web y qué páginas reciben
       impresiones. Ajustar el plan de contenidos con esos datos.
 
@@ -75,13 +77,21 @@ Ideas priorizadas, derivadas de proyectos existentes:
 
 ## Arreglos técnicos de paso
 
-- [ ] `src/pages/index.astro:97-99`: eliminar los tres `</p>` huérfanos (HTML inválido).
-- [ ] `src/site.config.ts`: sustituir la `description` global (párrafo largo con
-      keywords) por una frase clara de ~155 caracteres.
-- [ ] Unificar formato de `publishDate` en los posts (el de Rofi usa `2025-06-11`; el
-      resto `11 Jun 2025`).
+- [x] `src/pages/index.astro:97-99`: eliminar los tres `</p>` huérfanos (HTML inválido).
+      *(Hecho 16/7/2026: también había un `</section>` huérfano; eliminados los cuatro.)*
+- [x] `src/site.config.ts`: sustituir la `description` global (párrafo largo con
+      keywords) por una frase clara de ~155 caracteres. *(Hecho 16/7/2026.)*
+- [x] Unificar formato de `publishDate` en los posts (el de Rofi usa `2025-06-11`; el
+      resto `11 Jun 2025`). *(Hecho 16/7/2026: todos a ISO `YYYY-MM-DD` + `timeZone:
+      "UTC"` en `site.config.ts` para evitar el desfase de un día al formatear en
+      UTC-3.)*
 - [ ] Si se añaden páginas en español: definir estructura de URLs (`/es/...`) y
       configurar `hreflang`.
+- [ ] **Racionalizar las páginas de tags**: hay 28 tags para solo 9 posts y muchos
+      tienen un único post (`fedora`, `java`, `rofi`, `mooc`…), lo que genera páginas
+      casi vacías que diluyen el sitio de cara a Google. Opciones: consolidar tags en
+      menos categorías más amplias, o añadir `noindex` a las páginas de tag (y quitarlas
+      del sitemap) manteniéndolas solo como navegación interna.
 
 ---
 
