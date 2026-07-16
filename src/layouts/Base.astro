@@ -13,7 +13,7 @@ interface Props {
 }
 
 const {
-	meta: { articleDate, lang, description = siteConfig.description, ogImage, title },
+	meta: { articleDate, lang = siteConfig.lang, description = siteConfig.description, ogImage, title },
 	fullWidth = false, // ← Valor por defecto
 } = Astro.props;
 ---
