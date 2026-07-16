@@ -26,7 +26,7 @@
 
 - [x] Añadir analytics ligero y sin cookies (GoatCounter, Umami o Plausible) en
       `src/components/BaseHead.astro`. _Hecho el 16 jul 2026: GoatCounter
-      (dpenedo.goatcounter.com), pendiente de desplegar._
+      (dpenedo.goatcounter.com), desplegado y verificado._
 - [x] Dar de alta dpenedo.com en **Google Search Console** y enviar el sitemap
       (ya se genera con `@astrojs/sitemap`). _Hecho el 15 jul 2026: sitemap enviado y
       leído, estado "Correcto", 40 páginas descubiertas._
@@ -87,11 +87,14 @@ Ideas priorizadas, derivadas de proyectos existentes:
       UTC-3.)*
 - [ ] Si se añaden páginas en español: definir estructura de URLs (`/es/...`) y
       configurar `hreflang`.
-- [ ] **Racionalizar las páginas de tags**: hay 28 tags para solo 9 posts y muchos
+- [x] **Racionalizar las páginas de tags**: hay 28 tags para solo 9 posts y muchos
       tienen un único post (`fedora`, `java`, `rofi`, `mooc`…), lo que genera páginas
       casi vacías que diluyen el sitio de cara a Google. Opciones: consolidar tags en
       menos categorías más amplias, o añadir `noindex` a las páginas de tag (y quitarlas
-      del sitemap) manteniéndolas solo como navegación interna.
+      del sitemap) manteniéndolas solo como navegación interna. *(Hecho 16/7/2026:
+      consolidados a 10 tags — `python`, `javascript`, `web`, `data`, `linux`,
+      `terminal`, `scripting`, `neovim`, `java`, `astro`. El sitio pasa de 44 a 27
+      páginas.)*
 
 ---
 
