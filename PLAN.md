@@ -44,11 +44,14 @@
 
 Ordenado por impacto por hora invertida:
 
-- [ ] **Podar el portfolio de la home**: dejar 5-6 proyectos fuertes (datos, bot de IA,
+- [x] **Podar el portfolio de la home**: dejar 5-6 proyectos fuertes (datos, bot de IA,
       clientes). Mover los de aprendizaje (Pomodoro, Martzianos, TodoList, tuVeterinaria,
       AprovechÁpp, Doggy) a una página de archivo o eliminarlos. Reescribir el titular
       de la home con ángulo diferenciado: *"Web & data developer. I build fast websites
-      for businesses and data pipelines for research"*.
+      for businesses and data pipelines for research"*. *(Hecho 16/7/2026: quedan 7
+      fuertes en la home; 8 movidos a `/archive` —incluidos Ceramic y ChronoScript—.
+      Titular nuevo y, tras la salida de Polyfen, copy freelance-first en home y
+      about-me.)*
 - [ ] Crear **página `/servicios` en español** (una sola página): qué haces, 2-3
       ejemplos reales con resultado (Matafuegos, Escuela de Columna, Albert Martin),
       testimonios y CTA de contacto claro.
