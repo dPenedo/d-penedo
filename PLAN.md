@@ -77,8 +77,113 @@ Ideas priorizadas, derivadas de proyectos existentes:
 - [ ] Caso de cliente: "Cómo migré la web de una empresa local a Astro y pasó a 90+ en
       PageSpeed" (en español, apunta a búsquedas de potenciales clientes).
 - [ ] Seguir con posts de herramientas nicho (Rofi, scripts bash, terminal): son los que
-      atraen tráfico de cola larga.
+      atraen tráfico de cola larga. → Concretado abajo en el plan de posts tmux/neovim.
 - [ ] Análisis publicable del Sociómetro Vasco con visualizaciones (ES + EU).
+
+### Plan de posts tmux / neovim / kitty (jul–nov 2026)
+
+> Elaborado el 16/7/2026 a partir de los dotfiles y de un barrido de long tails del
+> autocompletado de Google. Regla: el material sale de scripts y configs propios que
+> resuelven cosas que la documentación no cubre. Todos en inglés. Cadencia: 1/mes.
+
+1. **[ ] Jul 2026 — "Jumping between Claude Code sessions in tmux with fzf"**
+   (`ai-jump.sh`). Long tails: `tmux claude code`, `tmux for agents`,
+   `why use tmux with claude code`, `tmux orchestrator`. Ingrediente único: filtrar
+   panes por tty (Claude corre como `node`) y el truco `[c]laude` para que grep no se
+   autodetecte. *Prerrequisito*: pulir el script y publicarlo (gist o dotfiles
+   públicos) + GIF/asciinema del salto entre sesiones.
+   *Distribución*: r/ClaudeCode (workflows caseros funcionan muy bien allí; exige
+   flair y declarar tu relación con la herramienta), r/tmux, dev.to con canonical.
+   **No** r/commandline: prohíbe proyectos relacionados con IA generativa. Es el más
+   urgente: la ola IA+tmux está abierta y con poco contenido.
+
+2. **[ ] Ago 2026 — "tmux popups as a floating app layer"** (scratchpad precargado,
+   ncmpcpp, pomodoro propio, nota semanal, sesión mosh al VPS). Long tails:
+   `tmux popup`, `tmux floating window`, `tmux background session`. El patrón
+   reutilizable es `has-session || new-session` + `display-popup`.
+   *Prerrequisito*: GIF de 2-3 popups en acción.
+   *Distribución*: r/commandline, r/tmux, r/unixporn (solo con GIF vistoso), dev.to.
+
+3. **[ ] Sep 2026 — "kitty + tmux without friction"** (workaround extended-keys /
+   snacks.image con referencia a folke/snacks.nvim#2332, OSC52 para yank por SSH,
+   nombres de ventana dinámicos vía título OSC 2, `tmux-paste` que no vuelca
+   imágenes). Long tails: `tmux yank to clipboard`, `tmux xterm-kitty`,
+   `tmux vs kitty`, y búsquedas de mensajes de error concretos.
+   *Distribución*: r/KittyTerminal (sin reglas propias, comunidad pequeña pero
+   exacta), r/tmux, r/neovim (ángulo snacks.image, enmarcado como solución a un
+   problema, no como "mira mi config"), comentar con enlace en el propio issue de
+   GitHub (tráfico cualificado permanente), dev.to.
+
+4. **[ ] Oct 2026 — "I rewrote tmux-sessionizer in Python — here's what I added"**
+   (preview en vivo por ventana, `sessions.conf` con saltos directos, hydrate por
+   proyecto). Long tails: `tmux session manager`, `best tmux session manager`,
+   `tmux sessionizer`. Audiencia: la comunidad de ThePrimeagen.
+   *Prerrequisito*: README decente en el repo. **Publicar el repo ya**: r/commandline
+   rechaza proyectos con menos de 30 días o pocos commits, así que en octubre debe
+   tener historia.
+   *Distribución*: r/commandline (cumpliendo sus reglas: listar alternativas
+   —sessionizer original, sesh, tmuxinator—, declarar si hay código asistido por IA,
+   texto del post escrito a mano), r/tmux, dev.to, posible Show HN.
+
+5. **[ ] Nov 2026 — "Homemade Neovim keymaps I actually use daily"** (copiar
+   `ruta:línea` y selección con cabecera para dar contexto a agentes de IA,
+   insertador de debug logs por filetype, pydoc en ventana flotante, notas de
+   proyecto → vault). Long tails: `neovim claude code`, `neovim keymaps`,
+   `neovim ai`. *Distribución*: r/neovim, pero ojo: su regla manda las configs al
+   hilo mensual de dotfiles. Enmarcarlo como flujo de trabajo concreto ("How I pass
+   file context to AI agents from Neovim"), no como volcado de keymaps. dev.to.
+
+**Estrategia Reddit (anti-borrado por autopromoción):**
+
+- El valor va **dentro del post de Reddit**: post de texto con el truco, el código o
+  el GIF incluidos; el enlace al blog al final ("versión larga aquí") o en un
+  comentario. Nunca un post que sea solo el enlace.
+- Respetar la regla ~9:1: comentar y participar en el subreddit las semanas previas;
+  no estrenar cuenta con autopromo.
+- No cross-postear el mismo enlace a varios subreddits el mismo día; espaciar y
+  adaptar el texto a cada comunidad.
+- Responder comentarios las primeras horas: el engagement decide si el post vive.
+
+**Reglas verificadas por subreddit (leídas el 16/7/2026 vía la API de Reddit):**
+
+- **r/tmux** — solo 2 reglas: on-topic y buscar antes de preguntar. El más
+  permisivo; sirve para los posts 1-4.
+- **r/ClaudeCode** — permite compartir herramientas **con disclosure** (qué hace,
+  quién se beneficia, coste, tu relación con ella). Flair obligatorio. Ideal para
+  el post 1.
+- **r/commandline** — se ha endurecido mucho: prohíbe proyectos relacionados con IA
+  generativa, prohíbe texto de post generado con IA, exige que el código
+  mayormente generado por IA se declare, rechaza repos con <30 días o pocos
+  commits, y pide listar software alternativo/similar. Sirve para los posts 2 y 4
+  cumpliendo todo eso. Nada del post 1 aquí.
+- **r/neovim** — sin autopromo/spam; las configs van al hilo mensual de dotfiles;
+  prohibidos los "Neovim vs X" (nada de comparativas aquí) y el plagio (citar
+  fuentes de código ajeno). Los posts tipo "cómo resuelvo X" sí caben.
+- **r/KittyTerminal** — sin reglas propias, solo las de Reddit. Pequeño pero
+  audiencia exacta para el post 3.
+- **r/unixporn** — muy estricto en formato: tag [OC] o [Workflow] en el título,
+  mínimo 2 ventanas con 2 apps distintas en pantalla, comentario de detalles con
+  dotfiles. Solo merece la pena con un vídeo/GIF cuidado; opcional.
+- **r/vim** — descartado: solo vim, Neovim explícitamente excluido.
+
+**Canales fuera de Reddit:**
+
+- **Terminal Trove** (terminaltrove.com) — directorio curado de herramientas de
+  terminal con newsletter y RSS; admite submissions. Encaja ai-jump y
+  tmux-sessionizer cuando tengan repo con README.
+- **console.dev** — newsletter semanal de devtools (~30k suscriptores); seleccionan
+  2-3 herramientas/semana según criterios publicados. Probar con tmux-sessionizer.
+- **Hacker News** — Show HN para el sessionizer; los posts de flujos tmux+IA también
+  funcionan como artículo normal. Mismo principio que Reddit: valor primero,
+  y quedarse a responder comentarios.
+- **lobste.rs** — audiencia perfecta (terminal/unix), pero requiere invitación de
+  un miembro; conseguirla vale la pena a medio plazo.
+- **Mastodon/Bluesky** — hashtags #neovim #tmux #terminal; Fosstodon es el nodo
+  natural. Ya previsto en Fase 3 para lo vasco; añadir estos hashtags.
+- **Lemmy** (programming.dev) — comunidades de neovim/commandline pequeñas pero
+  receptivas a OC; sin cultura anti-autopromo si el contenido es real.
+- **Discord/Matrix de Neovim** y foros de kitty (GitHub Discussions) — para los
+  posts 3 y 5, compartir como "esto me pasaba y así lo resolví".
 
 ## Fase 3 — Distribución (por cada post, ~30 min)
 
