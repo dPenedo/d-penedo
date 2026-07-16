@@ -1,8 +1,8 @@
 ---
 title: "Add Multilingual Support to Your Streamlit and Plotly App"
 description: "Step by step guide to translating a Streamlit data app with Plotly charts using a simple JSON-based system."
-publishDate: "17 Nov 2025"
-tags: ["Python", "Plotly", "Data science", "Translations"]
+publishDate: "2025-11-17"
+tags: ["python", "data"]
 ---
 
 

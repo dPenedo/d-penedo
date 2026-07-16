@@ -1,8 +1,8 @@
 ---
 title: "Django Context and Making It Global with Context Processors"
 description: "Learn how Django bridges backend and frontend communication using context and context processors for global data access."
-publishDate: "6 Feb 2025"
-tags: ["django", "web development", "python", "context processors", "backend", "frontend"]
+publishDate: "2025-02-06"
+tags: ["python", "web"]
 ---
 
 

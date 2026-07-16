@@ -1,8 +1,8 @@
 ---
 title: "About this Blog and Portfolio"
 description: "This is the first post on the Blog, a welcome post"
-publishDate: "23 May 2024"
-tags: ["astro", "social"]
+publishDate: "2024-05-23"
+tags: ["astro", "web"]
 ---
 
 

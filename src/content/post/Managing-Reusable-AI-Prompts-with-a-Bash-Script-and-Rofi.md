@@ -3,10 +3,7 @@ title: "Managing Reusable AI Prompts with a Bash Script and Rofi"
 description: "Use a bash script and Rofi to quickly select and paste reusable AI prompts stored as Markdown files."
 publishDate: "2025-06-11"
 tags:
-  - rofi
   - linux
-  - AI
-  - prompt-engineering
   - scripting
 ---
 

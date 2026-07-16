@@ -1,8 +1,8 @@
 ---
 title: "About data types in JavaScript"
 description: "Explanation and examples of data types in JavaScript"
-publishDate: "29 Oct 2024"
-tags: ["JavaScript", "types"]
+publishDate: "2024-10-29"
+tags: ["javascript", "web"]
 ---
 
 

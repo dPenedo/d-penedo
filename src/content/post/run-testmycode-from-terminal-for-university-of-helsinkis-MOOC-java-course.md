@@ -1,8 +1,8 @@
 ---
 title: "Run TestMyCode from Terminal for Java MOOC course"
 description: "Guide on running TestMyCode from the terminal for the University of Helsinki Java MOOC course."
-publishDate: "15 Jan 2025"
-tags: ["Java", "TestMyCode", "MOOC", "terminal"]
+publishDate: "2025-01-15"
+tags: ["java", "terminal"]
 ---
 
 

@@ -1,12 +1,11 @@
 ---
 title: "From mini.files and neo-tree to oil.nvim"
 description: "Notes from trying nearly every file manager in and around Neovim, and the small oil.nvim tweaks that finally made it stick."
-publishDate: "14 Jul 2026"
+publishDate: "2026-07-14"
 tags:
   - neovim
   - linux
   - terminal
-  - workflow
 ---
 
 

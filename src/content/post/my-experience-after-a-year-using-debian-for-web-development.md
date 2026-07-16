@@ -1,8 +1,8 @@
 ---
 title: "My Experience After a Year Using Debian for Web Development"
 description: "Reflecting on a year of using Debian for web development, including its challenges, advantages, and why I'm switching back to Fedora."
-publishDate: "11 December 2024"
-tags: ["linux", "web development", "Debian", "Fedora"]
+publishDate: "2024-12-11"
+tags: ["linux", "web"]
 ---
 
 

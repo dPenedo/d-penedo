@@ -1,10 +1,10 @@
 ---
 title: "Check Git Status Across Your Projects with This Bash Script"
 description: "This bash script iterates git status on all the repositories and gives an easy reading output"
-publishDate: "30 May 2025"
+publishDate: "2025-05-30"
 tags:
-  - "git"
   - "scripting"
+  - "terminal"
 ---
 
 
