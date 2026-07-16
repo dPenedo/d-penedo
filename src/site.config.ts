@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
   // Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
   title: "Daniel Penedo Lázaro | Web & Data Developer",
   // Meta property used as the default description meta property
-  description: "I'm Daniel Penedo Lázaro, a web and data developer specializing in building modern websites and applications with Django, React, Astro, and TypeScript. I also work on data automation and visualization projects using Python, Pandas, and Streamlit. Passionate about Linux, open-source technologies, and efficient programming, I share insights and projects that combine innovation, automation, and best practices in development.",
+  description: "Daniel Penedo Lázaro, web and data developer. I build fast websites for businesses and Python data pipelines for research, and write about Linux and automation.",
   // HTML lang property, found in src/layouts/Base.astro L:18
   lang: "en-GB",
   // Meta property, found in src/components/BaseHead.astro L:42
@@ -19,6 +19,7 @@ export const siteConfig: SiteConfig = {
       day: "numeric",
       month: "short",
       year: "numeric",
+      timeZone: "UTC",
     },
   },
   webmentions: {
