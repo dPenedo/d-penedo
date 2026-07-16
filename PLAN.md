@@ -35,18 +35,29 @@
 
 ## Fase 1 — Conversión y posicionamiento (1-2 tardes)
 
-- [ ] Crear **página de servicios en español**: "Desarrollo web para negocios y
-      proyectos de datos". Incluir proceso de trabajo, ejemplos reales (Matafuegos,
-      Escuela de Columna, Albert Martin) y CTA de contacto claro. Es la página con más
-      potencial para captar clientes por búsqueda local.
-- [ ] Reescribir el titular de la home con ángulo diferenciado. Propuesta:
-      *"Desarrollador web y de datos. Construyo webs rápidas para negocios y pipelines
-      de datos para investigación"* (versión EN equivalente).
+> Enfoque (reformulado el 16/7/2026): los clientes freelance llegan por vías
+> calientes —recomendación y créditos en los footers de webs de clientes—, no por SEO
+> frío. La página de servicios es la **página de aterrizaje de esos referidos**, no una
+> apuesta SEO (si cae tráfico de búsqueda local, es regalo). El resto de la web se
+> queda en inglés para la audiencia técnica/empleo; no hace falta `/es/` ni `hreflang`
+> para una sola página.
+
+Ordenado por impacto por hora invertida:
+
 - [ ] **Podar el portfolio de la home**: dejar 5-6 proyectos fuertes (datos, bot de IA,
       clientes). Mover los de aprendizaje (Pomodoro, Martzianos, TodoList, tuVeterinaria,
-      AprovechÁpp, Doggy) a una página de archivo o eliminarlos.
-- [ ] Añadir **CV descargable** (PDF, versión EN y ES).
-- [ ] Conseguir y publicar 1-2 **testimonios** de clientes reales.
+      AprovechÁpp, Doggy) a una página de archivo o eliminarlos. Reescribir el titular
+      de la home con ángulo diferenciado: *"Web & data developer. I build fast websites
+      for businesses and data pipelines for research"*.
+- [ ] Crear **página `/servicios` en español** (una sola página): qué haces, 2-3
+      ejemplos reales con resultado (Matafuegos, Escuela de Columna, Albert Martin),
+      testimonios y CTA de contacto claro.
+- [ ] Poner/verificar el **crédito "Desarrollado por Daniel Penedo"** con enlace a
+      `/servicios` en los footers de las webs de clientes. Sin esto la página no recibe
+      visitas; es la fuente de tráfico real.
+- [ ] Pedir 1-2 **testimonios** de clientes reales (alimentan `/servicios`).
+- [ ] Añadir **CV descargable** (PDF, versión EN y ES). No trae visitas: convierte las
+      que hay (recruiters que necesitan un PDF que reenviar).
 
 ## Fase 2 — Contenidos con nicho (continuo, 1-2 posts/mes)
 
