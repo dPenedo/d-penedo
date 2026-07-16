@@ -14,7 +14,7 @@ Working with Generative Artificial Intelligence (like ChatGPT, Gemini, DeepSeek,
 
 Although these tools can "learn" from previous conversations, that also means losing some control over how context is handled. Personally, I work as a teacher in very different contexts, and I need to be explicit about _who_ is asking and _how_ the answer should be shaped.
 
-That’s why I created this simple system. I wear different hats throughout the day—programmer, teacher, content creator—and each of them requires a different tone and purpose when writing prompts. For instance:
+That’s why I created this simple system. I wear different hats throughout the day (programmer, teacher, content creator) and each of them requires a different tone and purpose when writing prompts. For instance:
 
 - As a teacher, I teach AI to professionals,
 - I give private saxophone and guitar lessons,
@@ -23,21 +23,21 @@ That’s why I created this simple system. I wear different hats throughout the 
 
 So, when I ask an AI tool for examples or explanations, I have to be very specific about the audience and context. Rewriting the same context over and over became tiring.
 
-While this system could be useful for other things—like storing and reusing helpful references—right now I use it mostly to quickly paste role-specific prompts without repeating myself.
+While this system could be useful for other things, like storing and reusing helpful references, right now I use it mostly to quickly paste role-specific prompts without repeating myself.
 
 ## Why Rofi
 
 [Rofi](https://github.com/davatorium/rofi) is a popular application launcher and window switcher for Linux and macOS. It's a highly scriptable replacement for `dmenu`.
 
-I use Rofi for this task because it can display a list of options and return the one the user selects—perfect for picking a prompt. But you could achieve something similar with other tools too, like a scratchpad terminal running `fzf`.
+I use Rofi for this task because it can display a list of options and return the one the user selects, which is perfect for picking a prompt. But you could achieve something similar with other tools too, like a scratchpad terminal running `fzf`.
 
-For example, I also use Rofi as a power menu—each option (shutdown, reboot, etc.) runs a specific script.
+For example, I also use Rofi as a power menu, where each option (shutdown, reboot, etc.) runs a specific script.
 
 ## The Script
 
 The script below lists all files in a directory (`$PROMPTS_DIR`) and presents the filenames (without extensions) as selectable options in Rofi. In my case, the files are Markdown (`.md`), but you could use any file format.
 
-When you select a file, the script copies its content to the clipboard. It detects whether you're using X11 or Wayland and uses the appropriate tool (`xclip` or `wl-copy`). On X11, it also uses `xdotool` to simulate `Ctrl+Shift+V` to paste automatically—this can be disabled by commenting that line.
+When you select a file, the script copies its content to the clipboard. It detects whether you're using X11 or Wayland and uses the appropriate tool (`xclip` or `wl-copy`). On X11, it also uses `xdotool` to simulate `Ctrl+Shift+V` to paste automatically; you can disable this by commenting that line.
 
 There’s also an Markdown icon added to each entry. It use use other format or if you prefer a minimal look, feel free to remove it.
 

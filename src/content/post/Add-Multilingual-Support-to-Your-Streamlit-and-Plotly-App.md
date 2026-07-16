@@ -9,7 +9,7 @@ tags: ["python", "data"]
 
 Streamlit, like other similar frameworks, allows you to build web applications with just Python code and display charts created with Matplotlib or Plotly interactively.
 
-I recently built an interactive data visualization project where users can explore different charts by filtering, hovering, and interacting with them. Once it was finished, I realized it should also include a Basque translation. At first, it seemed tricky because the `app.py` file calls different functions, mappings, and chart generators. But in my case, it turned out to be straightforward — and even helped me refactor the project into a better structure. What could seem like an extra problem actually improved the project by pushing me toward a more _SOLID_ design.
+I recently built an interactive data visualization project where users can explore different charts by filtering, hovering, and interacting with them. Once it was finished, I realized it should also include a Basque translation. At first, it seemed tricky because the `app.py` file calls different functions, mappings, and chart generators. But in my case, it turned out to be straightforward, and it even helped me refactor the project into a better structure. What could seem like an extra problem actually improved the project by pushing me toward a more _SOLID_ design.
 
 The interactive charts are available on my website in [spanish](https://dpenedo.com/data/es/sociometro-vasco/) and in [basque](https://dpenedo.com/data/es/sociometro-vasco/). Every value of the chart displays in both languages and I could extend it just adding more text on a single JSON file.
 
@@ -184,7 +184,7 @@ def generate_0_to_10_bar_chart(
     return fig
 ```
 
-All displayed labels come from parameters; the others, like "valores_str" and so on, are not shown to the user—they are internal labels used to create a DataFrame. This is how the function is called:
+All displayed labels come from parameters; the others, like "valores_str" and so on, are not shown to the user; they are internal labels used to create a DataFrame. This is how the function is called:
 
 ```py
 t = get_translations()
@@ -258,7 +258,7 @@ Implementing a translation system in a Streamlit application with Plotly charts 
 
 - **Improve maintainability**: All translations are centralized in one location
 - **Enhance scalability**: Adding new languages becomes trivial
-- **Follow SOLID principles**: Separation of concerns makes your code more robust
-- **Support dynamic content**: Users can switch languages seamlessly during runtime
+- **Follow SOLID principles**: Separation of concerns makes your code easier to maintain
+- **Support dynamic content**: Users can switch languages at runtime
 
 The approach of passing translated text as parameters to chart functions ensures that your visualization components remain clean and focused on their core functionality. The additional utility functions for handling dictionary transformations demonstrate how small, focused tools can solve specific internationalization challenges. And all of it without external dependencies!

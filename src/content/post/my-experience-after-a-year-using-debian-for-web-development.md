@@ -31,7 +31,7 @@ When I switched to Debian, version 12 (Bookworm) had been released a few months 
 
 ### Installation
 
-The installation process is straightforward and not particularly difficult. However, the **Debian website** is unintuitive. While they have a large "Download" button, it’s unclear what exactly you’re downloading—Is it the latest version? Stable version? GNOME version? Although I eventually found the necessary information, this should be clearer on the website.
+The installation process is straightforward and not particularly difficult. However, the **Debian website** is unintuitive. While they have a large "Download" button, it’s unclear what exactly you’re downloading. Is it the latest version? Stable version? GNOME version? Although I eventually found the necessary information, this should be clearer on the website.
 
 ### Software
 
@@ -57,4 +57,4 @@ When you attempt to globally install packages with `pip`, Debian enforces **Pyth
 
 Debian is a great distro for general desktop users. Although many developers use it daily, I think it requires unnecessary extra effort to install updated tools. For web development, I found Fedora more suitable due to its up-to-date software and easier workflows.
 
-Debian’s strengths—stability, security, and strict adherence to best practices—make it an excellent choice for servers or secondary machines. However, for my primary setup, I’ll stick with Fedora for its balance of stability and modernity.
+Debian’s strengths (stability, security, and strict adherence to best practices) make it an excellent choice for servers or secondary machines. However, for my primary setup, I’ll stick with Fedora for its balance of stability and modernity.

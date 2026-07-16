@@ -8,13 +8,13 @@ tags:
 ---
 
 
-I usually work across multiple computers for both personal and professional projects, so I keep (almost) everything on GitHub. There, I store not only software projects but also my notes (organized using the Zettelkasten method — more on that in a future post!). I also host various personal files, such as music sheets that I edit with MuseScore. Another key repository is a directory with all my configuration files (`dotfiles`) for tools I use daily — Neovim, tiling window managers, bash, zsh, terminals, and more. I manage these using the legendary GNU tool `stow`.
+I usually work across multiple computers for both personal and professional projects, so I keep (almost) everything on GitHub. There, I store not only software projects but also my notes (organized using the Zettelkasten method, more on that in a future post!). I also host various personal files, such as music sheets that I edit with MuseScore. Another key repository is a directory with all my configuration files (`dotfiles`) for tools I use daily: Neovim, tiling window managers, bash, zsh, terminals, and more. I manage these using the legendary GNU tool `stow`.
 
 Keeping all my repositories up-to-date is essential for my daily workflow. If I forget to push changes, I risk running into annoying merge conflicts. That’s why I wrote this bash script to automatically check the status of all my git repositories.
 
 ## How it checks the specified directories
 
-I usually keep my projects inside a directory called `repos/`. However, some repositories live elsewhere. For instance, I store my configuration files in `~/.dotfiles`, and when I fork Neovim plugins, I place them in `~/.local/share/nvim/lazy/` — the directory used by Neovim’s lazy.nvim. One such example is my fork of the [kanagawa colorscheme](https://github.com/rebelot/kanagawa.nvim).
+I usually keep my projects inside a directory called `repos/`. However, some repositories live elsewhere. For instance, I store my configuration files in `~/.dotfiles`, and when I fork Neovim plugins, I place them in `~/.local/share/nvim/lazy/`, the directory used by Neovim’s lazy.nvim. One such example is my fork of the [kanagawa colorscheme](https://github.com/rebelot/kanagawa.nvim).
 
 That’s why I declare several directory variables at the beginning of the script. The `base_dir` is iterated over, while the others are individual repositories assumed to contain a `.git/` directory.
 
