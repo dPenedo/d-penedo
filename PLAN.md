@@ -52,9 +52,14 @@ Ordenado por impacto por hora invertida:
       fuertes en la home; 8 movidos a `/archive` —incluidos Ceramic y ChronoScript—.
       Titular nuevo y, tras la salida de Polyfen, copy freelance-first en home y
       about-me.)*
-- [ ] Crear **página `/servicios` en español** (una sola página): qué haces, 2-3
+- [x] Crear **página `/servicios` en español** (una sola página): qué haces, 2-3
       ejemplos reales con resultado (Matafuegos, Escuela de Columna, Albert Martin),
-      testimonios y CTA de contacto claro.
+      testimonios y CTA de contacto claro. *(Hecho 20/7/2026: `src/pages/servicios.astro`,
+      sin enlazar aún desde el menú —a la espera del crédito en los footers de
+      clientes—. Sección de testimonios omitida hasta pedirlos, ver tarea siguiente.
+      Ampliada con una segunda sección "Datos e investigación" —News Scraper, Basque
+      Media Scraper, Sociómetro Vasco— para no depender solo de 3 casos web y
+      reforzar el nicho datos + scraping del diagnóstico.)*
 - [ ] Poner/verificar el **crédito "Desarrollado por Daniel Penedo"** con enlace a
       `/servicios` en los footers de las webs de clientes. Sin esto la página no recibe
       visitas; es la fuente de tráfico real.
