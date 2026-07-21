@@ -1,0 +1,134 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import Project from "@/components/Project.astro";
+import matafuegos from "/public/captura-matafuegos1.png";
+import escuelaDeColumnaCapt from "public/captura-escuela-col.webp";
+import albertCapt from "/public/captura-alber.png";
+import scrapingCapt from "/public/captura-scraping.png";
+import basqueMediaCapt from "/public/captura-basquemedia.png";
+import sociometroCapt from "/public/captura-sociometro.png";
+
+const meta = {
+	title: "Servicios",
+	description:
+		"Desarrollo web para negocios y pipelines de datos para investigación: casos reales (Matafuegos, Escuela de Columna, scraping de medios, Sociómetro Vasco).",
+	lang: "es",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">Servicios</h1>
+		<p>
+			Trabajo en dos líneas: <b class="text-quote">webs a medida para negocios</b> (rápidas, con
+			buen SEO técnico y sin dependencias innecesarias) y <b class="text-quote"
+				>pipelines de datos para investigación</b
+			> (scraping, procesamiento y visualización).
+		</p>
+
+		<section class="mt-12">
+			<h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Desarrollo web para negocios</h2>
+
+			<Project
+				img={matafuegos}
+				title="Matafuegos Mar del Plata"
+				webLink1="https://matafuegosmardelplata.com.ar"
+				webLinkTitle1="Ver sitio web"
+			>
+				<p>
+					Reconstrucción completa de la web de una empresa de seguridad contra incendios, con foco
+					en <b class="text-quote">SEO técnico</b>, rendimiento y una interfaz moderna. Desarrollada
+					con <b class="text-quote">Astro</b>, componentes de <b class="text-quote">React</b> y
+					<b class="text-quote">Tailwind CSS</b>, con un resultado de
+					<b class="text-quote">90+ en PageSpeed</b>.
+				</p>
+			</Project>
+
+			<Project
+				img={escuelaDeColumnaCapt}
+				title="Escuela de Columna"
+				webLink1="https://escueladecolumna.com.ar/"
+				webLinkTitle1="Ver sitio web"
+			>
+				<p>
+					Web diseñada y desarrollada desde cero para un equipo multidisciplinar de
+					fisioterapeutas y médicos, con <b class="text-quote">Next.js</b> y
+					<b class="text-quote">Tailwind CSS</b>.
+				</p>
+			</Project>
+
+			<Project
+				img={albertCapt}
+				title="Albert Martin"
+				webLink1="https://albertmediador.com"
+				webLinkTitle1="Ver sitio web"
+			>
+				<p>
+					Web para un psicólogo y mediador. Diseño y desarrollo propios, sitio estático construido
+					con <b class="text-quote">Bootstrap</b>.
+				</p>
+			</Project>
+		</section>
+
+		<section class="mt-12">
+			<h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Datos e investigación</h2>
+
+			<Project
+				img={scrapingCapt}
+				title="News Scraper - pipeline de datos para investigación"
+				repoLink="https://github.com/dPenedo/news_scraper"
+				webLink1="https://humanidades.mdp.edu.ar/secretarias-subsecretarias/secretaria-de-transferencia-vinculacion-internacional-e-innovacion/observatorios/ospo/"
+				webLinkTitle1="Grupo de investigación OSPO"
+			>
+				<p>
+					Scraper en <b class="text-quote">Python</b> que recopila titulares, URLs y metadatos de
+					9 medios argentinos (locales de Mar del Plata y nacionales como Clarín, La Nación,
+					Página 12 e Infobae), desarrollado para un grupo de investigación sociológica de la
+					Universidad de Mar del Plata. Corre a diario en un <b class="text-quote">VPS</b> con
+					<b class="text-quote">Docker</b>.
+				</p>
+			</Project>
+
+			<Project
+				img={basqueMediaCapt}
+				title="Basque Media Scraper - pipeline de datos multi-fuente"
+				repoLink="https://github.com/dPenedo/basque_media"
+			>
+				<p>
+					Sistema de scraping en <b class="text-quote">Python</b> que recopila titulares de 13
+					medios vascos y españoles, con almacenamiento en <b class="text-quote">PostgreSQL</b> y
+					prevención automática de duplicados. Corre a diario en un <b class="text-quote">VPS</b>
+					vía <b class="text-quote">Docker</b>.
+				</p>
+			</Project>
+
+			<Project
+				img={sociometroCapt}
+				title="Sociómetro Vasco - análisis de datos de encuestas oficiales"
+				repoLink="https://github.com/dPenedo/sociometro-vasco"
+				webLink1="/data/es/sociometro-vasco"
+				webLink2="/data/eus/sociometro-vasco"
+				webLinkTitle1="Ver aplicación (español)"
+				webLinkTitle2="Ver aplicación (euskera)"
+			>
+				<p>
+					Aplicación de análisis sobre encuestas oficiales de población vasca, con
+					<b class="text-quote">Pandas</b> para el procesamiento y <b class="text-quote">Plotly</b>
+					más <b class="text-quote">Streamlit</b> para las visualizaciones interactivas. Permite
+					filtrar por edad, sexo, clase social, nivel educativo y conocimiento del euskera.
+				</p>
+			</Project>
+		</section>
+
+		<section class="mt-12">
+			<h2 class="title mb-4 text-2xl"><span class="text-accent">#</span> Contacto</h2>
+			<p>
+				¿Necesitas una web para tu negocio o un pipeline de datos para tu investigación?
+				Cuéntame qué necesitas y te respondo en menos de 24 horas: <a
+					class="cactus-link"
+					href="mailto:danielpenedolazaro@gmail.com">danielpenedolazaro@gmail.com</a
+				>.
+			</p>
+		</section>
+	</div>
+</PageLayout>
